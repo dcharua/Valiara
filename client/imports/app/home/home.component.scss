@@ -99,7 +99,7 @@ html {
 
 .overlay h3{
   color: #f1f1f1;
-  font-family: Futura-Bold;
+  font-family: Futura-Medium;
 }
 
 
@@ -180,11 +180,25 @@ hr {
   border-width: 1px;
 }
 
-
+input, select, textarea {
+    color: #ccc !important;
+    font: Futura-Light !important;
+}
 input[type=text] {
     border: none;
     border-bottom: 2px solid #ccc;
 }
+
+input[type=text]:not(.browser-default):focus:not([readonly]){
+  border: none;
+  border-bottom: 2px solid #C4A833 !important;
+  box-shadow: 0 1px 0 0 #C4A833;
+}
+input[type=text]:not(.browser-default):focus:not([readonly])+label{
+  color: #C4A833 !important;
+}
+
+
 
 .center{
   text-align: center;
@@ -192,6 +206,23 @@ input[type=text] {
 
 .form-icon{
   width: 35px;
+}
+.form{
+  margin:  auto;
+  text-align: center;
+  width: 65%;
+}
+
+.btn-contacto{
+    font-size: 1.6em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #C4A833 !important;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    font-family: Futura-Medium;
 }
 
 /* Change Autocomplete styles in Chrome*/

@@ -38,36 +38,35 @@
     <div class="overlay-content">
       <h3>Deja tus datos y nos contactaremos contigo</h3>
       <hr>
-      <div class="row">
-    <form class="col s12 center-align">
-      <div class="row">
-        <div class="input-field col s2 "></div>
-        <div class="input-field col s1 ">
-          <img src="/icons/Icono_Contacto.svg" class ="form-icon">
-        </div>
-        <div class="input-field col s3 ">
-          <input placeholder="Nombre Completo" id="first_name" type="text">
-          <label for="first_name"> </label>
-        </div>
-        <div class="input-field col s1 ">
-          <img src="/icons/Icono_Mail.svg" class ="form-icon">
-        </div>
-        <div class="input-field col s3 center-align">
-          <input placeholder="E-mail" id="last_name" type="text">
-        </div>
-      </div>
 
-      <div class="row">
-      <div class="input-field col s2 "></div>
-        <div class="input-field col s1 ">
-          <img src="/icons/Icono_Telefono.svg" class ="form-icon">
-        </div>
-        <div class="input-field col s3">
-          <input placeholder="Telefono" id="phone" type="text">
-        </div>
+      <div class="form">
+        <form class="col s12 center-align">
+
+          <div class="row">
+            <div class="input-field col s12 m5">
+                <img src="/icons/Icono_Contacto.svg" class="material-icons prefix">
+                <input id="nombre" type="text" class="validate">
+                <label for="icon_prefix">Nombre Completo</label>
+              </div>
+              <div class="input-field col m1"></div>
+              <div class="input-field col s12 m5">
+                  <img src="/icons/Icono_Mail.svg" class="material-icons prefix">
+                  <input id="mail" type="text" class="validate">
+                  <label for="icon_prefix">E-mail</label>
+                </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field  col s12 m5">
+                <img src="/icons/Icono_Telefono.svg" class="material-icons prefix">
+                <input id="telefono" type="text" class="validate">
+                <label for="icon_prefix">Teléfono</label>
+              </div>
+          </div>
+
+          <button class="btn-contacto btn-large" type="submit" name="action">¡QUIERO MI CASA!</button>
+        </form>
       </div>
-    </form>
-  </div>
     </div>
   </div>
 
