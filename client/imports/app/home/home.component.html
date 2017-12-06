@@ -3,33 +3,72 @@
       <div class="logo"><img src="/logos/Logo_Gris.svg" alt="Valeria" class ="logo"></div>
         <h5 class= "intro">COLECCIÓN DE 26 LUJOSAS RESIDENCIAS</h5>
         <div class = "button-div">
-          <a class="button" onclick="openNav()" href="#process" title="">¡ESCOGE LA TUYA!</a></div>
+          <a class="button" (click)="openNav()" href="#" title="">¡ESCOGE LA TUYA!</a></div>
   </div>
 
   <!-- The overlay -->
-  <div id="myNav" class="overlay">
+  <div id="city" class="overlay">
 
     <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
 
     <!-- Overlay content -->
     <div class="overlay-content">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div>
+      <h3>¿Dondé estás?</h3>
+      <hr>
+      <div class="row">
+        <label class="container">Puebla
+          <input type="checkbox" (click) ="openContact()">
+          <span class="checkmark"></span>
+        </label>
 
+        <label class="container">Cuidad de México
+          <input type="checkbox">
+          <span class="checkmark"  (click) ="openContact()"></span>
+        </label>
+    </div>
+  </div>
+
+  <div id="contact" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" (click)="closeContact()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <h3>Deja tus datos y nos contactaremos contigo</h3>
+      <hr>
+      <div class="row">
+    <form class="col s12 center-align">
+      <div class="row">
+        <div class="input-field col s2 "></div>
+        <div class="input-field col s1 ">
+          <img src="/icons/Icono_Contacto.svg" class ="form-icon">
+        </div>
+        <div class="input-field col s3 ">
+          <input placeholder="Nombre Completo" id="first_name" type="text">
+          <label for="first_name"> </label>
+        </div>
+        <div class="input-field col s1 ">
+          <img src="/icons/Icono_Mail.svg" class ="form-icon">
+        </div>
+        <div class="input-field col s3 center-align">
+          <input placeholder="E-mail" id="last_name" type="text">
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s2 "></div>
+        <div class="input-field col s1 ">
+          <img src="/icons/Icono_Telefono.svg" class ="form-icon">
+        </div>
+        <div class="input-field col s3">
+          <input placeholder="Telefono" id="phone" type="text">
+        </div>
+      </div>
+    </form>
+  </div>
+    </div>
   </div>
 
   <!-- Use any element to open/show the overlay navigation menu -->
-
-  <script>
-  function openNav() {
-      document.getElementById("myNav").style.height = "100%";
-  }
-
-  function closeNav() {
-      document.getElementById("myNav").style.height = "0%";
-  }
-  </script>

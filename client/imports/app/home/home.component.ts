@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit} from '@angular/core';
+import { Component, HostListener, AfterViewInit} from '@angular/core';
 import { Router, ActivatedRoute, Params, NavigationEnd } from '@angular/router';
 import template from './home.component.html';
 import style from './home.component.scss';
@@ -11,7 +11,7 @@ declare var moment:any;
 	template,
 	styles: [ style ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 	public previousUrl: string;
 
 	constructor(
@@ -21,15 +21,21 @@ export class HomeComponent implements OnInit {
 		this.previousUrl = '.';
 	}
 
-	ngOnInit() {
+	openNav() {
+		$("div#city").css({"width":"100% "});
+		$("div#city").css({"height":"100% "});
+	}
 
-		function openNav() {
-				document.getElementById("myNav").style.height = "100%";
-		}
+	closeNav() {
+		$("div#city").css({"width":"0%"});
+	}
 
-		function closeNav() {
-				document.getElementById("myNav").style.height = "0%";
-		}
+	openContact() {
+		$("div#city").css({"height":"0%"});
+		$("div#contact").css({"width":"100%"});
+	}
 
+	closeContact() {
+		$("div#contact").css({"width":"0%"});
 	}
 }
