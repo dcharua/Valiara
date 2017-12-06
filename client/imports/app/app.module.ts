@@ -7,11 +7,7 @@ import { routes } from './app.routes';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { WhoComponent } from './who/who.component';
-import { WhatComponent } from './what/what.component';
-import { WhereComponent } from './where/where.component';
-import { ProjectComponent } from './projects/projects.component';
-import { ErrorComponent } from './error/error.component';
+import { AmenititesComponent } from './amenitites/amenitites.component';
 
 @NgModule({
     // Components, Pipes, Directive
@@ -20,11 +16,7 @@ import { ErrorComponent } from './error/error.component';
         NavbarComponent,
         FooterComponent,
         HomeComponent,
-        WhoComponent,
-        WhatComponent,
-        WhereComponent,
-        ProjectComponent,
-        ErrorComponent
+        AmenititesComponent
     ],
     // Entry Components
     entryComponents: [

@@ -12,25 +12,6 @@ declare var $:any;
 export class NavbarComponent {
 	public url: string;
 
-	constructor(private router: Router) {
-	    router.events.subscribe(event => {
-	        if (event instanceof NavigationStart){
-	        	// In the home section, the navbar elements vary a lot
-	        	if (event.url != '/' && event.url != 'who') {
-					$('#logo-bolt-black').css('display', 'none');
-					$('#rayo-negro').css('display', 'block');
-					$('#logo-bolt-white').css('display', 'none');
-					$('#burger-white').css('display', 'none');
-					$('#burger-black').css('display', 'block');
-					if ($(window).width() <= 600)
-						$('#navbar').addClass('yellow-navbar');
-				} else {
-					$('#logo-bolt-black').css('display', 'block');
-					$('#rayo-negro').css('display', 'none');
-				}
-	        }
-	    });
-	}
 
 	openNav() {
 		document.getElementById("sidenav").style.width = "100%";
