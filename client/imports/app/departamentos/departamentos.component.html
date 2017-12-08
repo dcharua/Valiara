@@ -1,0 +1,102 @@
+<div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <div id="background-1" class ="background"></div>
+      </li>
+      <li>
+        <div id="background-2" class ="background">
+          <!-- <div class="logo-over"><img src="/logos/Logo_Blanco.svg" alt="Valeria" ></div> -->
+        </div>
+      </li>
+      <li>
+        <div id="background-3" class ="background"></div>
+      </li>
+      <li>
+        <div id="background-4" class ="background"></div>
+      </li>
+    </ul>
+</div>
+
+<div id="icons">
+
+  <img src="/icons/Flecha_Izquierda.svg" class="arrows" (click)="prevSlide()">
+  <img src="/icons/Flecha_Derecha.svg" class="arrows" (click)="nextSlide()">
+</div>
+
+<div id="verMas" class="center-align">
+  <div id="mas" (click)="openMas()">
+      <img src="/icons/Flecha_Arriba_Azul.svg" class ="arrow-up">
+      <h4 >Torre A</h4><img src="/icons/circle.svg"  class="dot"> <h4>Torre B</h4>
+  </div>
+
+
+  <div id="verMasAfter" >
+    <div id="menos" class="menos" >
+        <h4 class="activeh4">Torre A</h4> <img src="/icons/circle.svg" class="dot"> <h4>Torre B</h4>
+      <img src="/icons/Flecha_Abajo_Azul.svg" class ="arrow-down" (click)="closeMas()">
+  </div>
+
+
+    <h5 class="center-align activeh5">Acabados</h5> <h5 class="center-align">Departamenos</h5>
+    <hr>
+      <ul class="left-align" id="acabadosTA" style="display=none;">
+        <li>Laminado y porcelanato en piso</li>
+        <li>Muebles de baño</li>
+        <li>Lámparas</li>
+        <li>Closets</li>
+        <li>Puertas</li>
+        <li>Cocina equipada</li>
+        <li>Cubiertas de granito</li>
+        <li>Lavadero / Calentador</li>
+        <li>Muros acabados en pintura</li>
+        <li>Dos lugares de estacionamiento</li>
+      </ul>
+
+      <div id="departamentosTA">
+        <div class="row">
+          <h5 class="center-align activeh5">GH 1</h5> <h5 class="center-align">Tipo 1</h5> <h5 class="center-align">Lofts</h5>
+        </div>
+        <div id="GH1">
+        <div class="info">
+
+          <table >
+            <tr>
+              <th>Recamaras:</th>
+              <th class= "light">3</th>
+            </tr>
+            <tr>
+              <th>Baños:</th>
+              <th class= "light">3 completos</th>
+            </tr>
+            <tr>
+              <th>Interior:</th>
+              <th class= "light">129.5 m2</th>
+            </tr>
+            <tr>
+              <th>Jardin:</th>
+              <th class= "light">26 m2</th>
+            </tr>
+            <tr>
+              <th>Area Total:</th>
+              <th class= "light">155.5 m2</th>
+            </tr>
+            <div id="otros">
+            <p class="nopadding"><strong>Otros:</strong><br>
+              Estudio con opción de<br>
+              convertirse en una<br>
+              tercer recámara<br>
+              Cocina<br>
+              Sala Comedor<br>
+              Patio de Lavado<br>
+            </p>
+            </div>
+
+          </table>
+
+        </div>
+
+
+        </div>
+      </div>
+  </div>
+</div>

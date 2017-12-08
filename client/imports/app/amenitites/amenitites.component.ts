@@ -22,24 +22,25 @@ export class AmenititesComponent implements OnInit{
 	}
 
 	ngOnInit() {
-		// Make the class full height (fix for the scrolling problem in safari and chorme with 100vh)
-		$('.content-container').css('height', $(window).height());
-		$('.content-container').css('width', $(window).width());
+	 $('.slider').slider();
 
+	 $('.slider').slider('start');
+		}
 
-		$('#fullpage').fullpage({
-			fullWidth: true,
-			autoplay: true,
-			scrollingSpeed: 700,
-			easing: 'easeInOutCubic',
-			easingcss3: 'ease',
-			controlArrows: true,
-			scrollOverflow: true,
-			paddingTop: '0',
-			paddingBottom: '0',
-			bigSectionsDestination: 'top',
-			slidesNavigation: true
-		});
-
+		nextSlide(){
+			$('.slider').slider('next')
+		}
+		prevSlide(){
+			$('.slider').slider('prev');
+		}
+		openMas(){
+			$("div#verMas").css({"height":"100% "});
+			$("div#mas").css({"display":"none "});
+			$("div#verMasAfter").css({"visibility":"visible "});
+		}
+		closeMas(){
+			$("div#verMas").css({"height":"8% "});
+			$("div#mas").css({"display":"block "});
+			$("div#verMasAfter").css({"visibility":"hidden "});
 		}
 	}

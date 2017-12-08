@@ -1,24 +1,48 @@
-<div id="fullpage">
-    <div class="section fp-auto-height hidden" data-indicators="true"></div>
-    <div class="section active" data-anchor="carousel-anchor" >
-        <div class="slide" id="background-1" data-anchor="slide-1">
-            <div class="content-container valign-wrapper">
 
-            </div>
+<div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <div id="background-1" class="background"></div>
+      </li>
+      <li>
+        <div id="background-2" class="background">
+          <!-- <div class="logo-over"><img src="/logos/Logo_Blanco.svg" alt="Valeria" ></div> -->
         </div>
-        <div class="slide" id="background-2" data-anchor="slide-2">
-            <div class="valign-wrapper content-container">
-                <div class="valign" id="b2-content">
-                    <h2 id="top">We are a digital product design and consultancy agency.</h2>
-                    <h2 id="bottom">YES... WE CHARGE FOR DESIGN</h2>
-                </div>
-            </div>
-        </div>
-        <div class="slide" id="background-3" data-anchor="slide-3">
-            <div class="content-container valign-wrapper">
-                <img class="valign" id="we-are-bolt" src="images/we_are_bolt.svg" alt="we are bolt.">
-            </div>
-        </div>
+      </li>
+      <li>
+        <div id="background-3" class="background"></div>
+      </li>
+    </ul>
+</div>
+
+<div id="icons">
+
+  <img src="/icons/Flecha_Izquierda.svg" class="arrows" (click)="prevSlide()">
+  <img src="/icons/Flecha_Derecha.svg" class="arrows" (click)="nextSlide()">
+</div>
+
+<div id="verMas" class="center-align">
+  <div id="mas" (click)="openMas()">
+      <img src="/icons/Flecha_Arriba_Azul.svg" class ="arrow-up">
+      <h4>Ver más</h4>
+  </div>
+
+
+  <div id="verMasAfter" (click)="closeMas()">
+    <div id="menos" class="menos">
+      <img src="/icons/Flecha_Abajo_Azul.svg" class ="arrow-down">
+      <h4>Estilo de vida al aire libre</h4>
+  </div>
+
+
+    <h5 class="left-align">Amenities</h5>
+    <hr>
+    <div class="center-align">
+    <p>Disfruta del asoleadero con mesas, jacuzzi, bar y un área de relajación que no podrás resistir.</p>
+      <br>
+      <p>Convive con tu familia y amigos en el jardín central con áreas para niños y adultos.</p>
+      <br>
+      <p>Parque Sinaloa te ofrece una casa club, gimnasio, área de talleres y terrazas para gozar con los que más quieres.</p>
     </div>
-
+  </div>
 </div>

@@ -1,9 +1,11 @@
 <div class="icon-bar">
-
+	<div id="logo-nav" [routerLink]="['/']" [routerLinkActive]="['active']"><img src="/logos/Logo_Gris.svg" alt="Valeria" >
+</div>
 	<div class="hover row " style="position:relative;">
 		<a [routerLink]="['/amenitites']" [routerLinkActive]="['active']" title="amenitites">
 			<div class="col" style="width:132px;">
-				<img src="/icons/Amenities_Gris.svg" alt="Amenities" style="width: 80%; height: 80%;">
+				<img [src]="'/icons/'+icons[0]" alt="Amenities" style="width: 80%; height: 80%;">
+
 			</div>
 			<div class="col" style="width:180px; position:absolute; top:0;">
 				<p>AMENITITES</p>
@@ -12,9 +14,9 @@
 	</div>
 
 	<div class="hover2 row" style="position:relative;">
-		<a href="#">
+		<a [routerLink]="['/departamentos']" [routerLinkActive]="['active']">
 			<div class="col" style="width:132px;">
-				<img src="/icons/Departamentos_Gris.svg" alt="Departamentos" style="width: 80%; height: 80%;">
+				<img [src]="'/icons/'+icons[1]" alt="Departamentos" style="width: 80%; height: 80%;">
 			</div>
 			<div class="col" style="width:180px; position:absolute; top:0;">
 				<p>DEPARTAMENTOS</p>
@@ -23,9 +25,9 @@
  </div>
 
  <div class="hover3 row" style="position:relative;">
-	 <a href="#">
+	<a [routerLink]="['/imagenes']" [routerLinkActive]="['active']">
 			<div class="col" style="width:132px;">
-				<img src="/icons/Imagenes_Gris.svg" alt="Imagenes" style="width: 80%; height: 80%;">
+				<img [src]="'/icons/'+icons[2]" alt="Imagenes" style="width: 80%; height: 80%;">
 			</div>
 			<div class="col" style="width:180px; position:absolute; top:0;">
 				<p>IMÁGENES</p>
@@ -34,9 +36,9 @@
   </div>
 
 	<div class="hover4 row" style="position:relative;">
-		<a href="#">
+		<a [routerLink]="['/ubicacion']" [routerLinkActive]="['active']">
 			<div class="col" style="width:132px;">
-				<img src="/icons/Ubicacion_Gris.svg" alt="Ubicacion" style="width: 80%; height: 80%;">
+				<img [src]="'/icons/'+icons[3]"alt="Ubicacion" style="width: 80%; height: 80%;">
 			</div>
 			<div class="col" style="width:180px; position:absolute; top:0;">
 				<p>UBICACIÓN</p>
@@ -45,9 +47,9 @@
  </div>
 
  <div class="hover5 row" style="position:relative;">
-	 <a href="#">
+	 <a [routerLink]="['/contacto']" [routerLinkActive]="['active']">
 			<div class="col" style="width:132px;">
-				<img src="/icons/Contacto_Gris.svg" alt="Contacto" style="width: 80%; height: 80%;">
+				<img [src]="'/icons/'+icons[4]" alt="Contacto" style="width: 80%; height: 80%;">
 			</div>
 			<div class="col" style="width:180px; position:absolute; top:0;">
 				<p>CONTACTO</p>

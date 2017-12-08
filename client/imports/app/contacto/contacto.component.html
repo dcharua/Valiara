@@ -1,0 +1,89 @@
+<div id="fullpage">
+
+    <h4>PUEBLA</h4>
+    <hr>
+
+    <p>Sandra Daguer <br>
+    (222) 466 2989 <br>
+    sandydaguer@hotmail.com</p>
+
+      <p>Sonia Garcés <br>
+      (55) 2272 0108<br>
+      garces_ventosa@hotmail.com</p>
+
+    <h4>CDMX</h4>
+    <hr>
+
+    <p>Bernardo Shapiro<br>
+    (55) 5257 2092<br>
+    bernardo@nexosin.com</p>
+    <button class="btn-contacto btn-large"  (click)="openNav()">¡ESTOY INTERESADO!</button>
+    <p id="aviso">Aviso de Privacidad</p>
+</div>
+
+<!-- The overlay -->
+<div id="city" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <div class="logo"><img src="/logos/Logo_Blanco.svg" alt="Valeria" ></div>
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <h3>¿Dondé estás?</h3>
+    <hr>
+    <div class="row">
+      <label class="container">Puebla
+        <input type="checkbox" (click) ="openContact()">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="container">Cuidad de México
+        <input type="checkbox">
+        <span class="checkmark"  (click) ="openContact()"></span>
+      </label>
+  </div>
+</div>
+
+<div id="contact" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" (click)="closeContact()">&times;</a>
+  <div class="logo"><img src="/logos/Logo_Blanco.svg" alt="Valeria" ></div>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <h3>Deja tus datos y nos contactaremos contigo</h3>
+    <hr>
+
+    <div class="form">
+      <form class="col s12 center-align">
+
+        <div class="row">
+          <div class="input-field col s12 m5">
+              <img src="/icons/Icono_Contacto.svg" class="material-icons prefix">
+              <input id="nombre" type="text" class="validate">
+              <label for="icon_prefix">Nombre Completo</label>
+            </div>
+            <div class="input-field col m1"></div>
+            <div class="input-field col s12 m5">
+                <img src="/icons/Icono_Mail.svg" class="material-icons prefix">
+                <input id="mail" type="text" class="validate">
+                <label for="icon_prefix">E-mail</label>
+              </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field  col s12 m5">
+              <img src="/icons/Icono_Telefono.svg" class="material-icons prefix">
+              <input id="telefono" type="text" class="validate">
+              <label for="icon_prefix">Teléfono</label>
+            </div>
+        </div>
+
+        <button class="btn-contacto btn-large" type="submit" name="action">¡QUIERO MI CASA!</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->

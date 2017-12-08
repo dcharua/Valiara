@@ -1,0 +1,153 @@
+.background{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+	position: fixed;
+}
+
+#background-1 {
+	background: url('/images/Departamentos/1.jpg') no-repeat center center fixed;
+
+}
+
+#background-2 {
+	background: url('/images/Departamentos/2.jpg') no-repeat center center fixed;
+}
+
+#background-3 {
+	background: url('/images/Departamentos/3.jpg') no-repeat center center fixed;
+}
+
+#background-4 {
+	background: url('/images/Departamentos/4.jpg') no-repeat center center fixed;
+}
+
+#icons{
+	position: fixed;
+	bottom: 50%;
+	right: 5%;
+	z-index: 10;
+
+	.arrows{
+		cursor: pointer;
+		background-color: #E3E3E5;
+		border-radius: 15px;
+	}
+}
+
+#verMas{
+	cursor: pointer;
+	transition: 0.5s;
+	width: 400px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	background-color: #E3E3E5;
+	height: 100%;
+	h4{
+    display: inline-block;
+		padding-top: 5px;
+		font-family: Futura-Heavy;
+		font-weight: 500;
+		font-size: 1.3em;
+		color: #3d4249;
+    margin: 0 35px;
+    padding: 0 3px;
+	}
+  .activeh4{
+    border-bottom:  2px solid #C4A833;
+  }
+	.arrow-up{
+		height: 30px;
+    width: 30px;
+    float: right;
+    padding-right: 5px;
+    padding-bottom: 20px;
+	}
+	.arrow-down{
+		height: 30px;
+		width: 30px;
+		float: right;
+		padding-right: 5px;
+		padding-top: 20px;
+	}
+	h5{
+    display: inline-block;
+		padding: 0 20px;
+		font-family: Futura;
+		font-size: 1.2em;
+	}
+  .activeh5{
+    font-family: Futura-heavy !important;
+  }
+	hr{
+		width: 87%;
+		border: 1px solid #C4A833;
+	}
+	p{
+		font-family: Futura-Light;
+		padding: 0px 60px;
+    text-align: left;
+	}
+	.menos{
+		background-color: #DBDBDB;
+		height: 100px;
+	}
+	.menos h4{
+		padding-top: 40px;
+	}
+  .dot{
+    width: 10px;
+  }
+  ul{
+    font-family: Futura-Light;
+    padding: 0px 60px;
+    text-align: left;
+  }
+}
+.nopadding{
+  padding: 0 !important;
+}
+
+
+.info{
+  margin-left: 25px;
+  width: 170px;
+}
+table{
+  table-layout: fixed;
+  font-size: 0.8em;
+}
+th{
+  padding: 2px 0 !important;
+}
+
+#acabadosTA{
+  display: none;
+}
+
+#mas{
+  display: none;
+}
+
+#verMasAfter{
+  visibility: visible;
+	cursor: pointer;
+	height: 100%;
+}
+
+#otros{
+  margin-top: 5px;
+  width: 150px;
+}
+
+strong{
+  font-family:Futura-heavy !important;
+}
+.light{
+  font-family:Futura-light !important;
+}

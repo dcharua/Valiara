@@ -1,0 +1,43 @@
+.background{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+}
+
+#background-1 {
+	background: url('/images/Imagenes/1.jpg');
+
+}
+
+#background-2 {
+	background: url('/images/Imagenes/2.jpg') ;
+}
+
+#background-3 {
+	background: url('/images/Imagenes/3.jpg') no-repeat center center fixed;
+}
+
+#background-4 {
+	background: url('/images/Imagenes/4.jpg') no-repeat center center fixed;
+}
+
+#icons{
+	position: fixed;
+	bottom: 50%;
+	right: 5%;
+	z-index: 10;
+
+	.arrows{
+		cursor: pointer;
+		background-color: #E3E3E5;
+		border-radius: 15px;
+	}
+}

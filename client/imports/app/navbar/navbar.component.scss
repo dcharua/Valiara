@@ -1,14 +1,15 @@
 .icon-bar {
   position: absolute;
   margin-top:  30px;
+  z-index: 10;
+  height: 90%;
 }
 
 .icon-bar a {
     background-color: #E3E3E5;
-    width: 150px; /* Set a specific width */
-    height: 90px;
+    width: 136px; /* Set a specific width */
+    height: 80px;
     display: block; /* Make the links appear below each other instead of side-by-side */
-    text-align: center; /* Center-align text */
     padding: 16px; /* Add some padding */
     margin-top:  20px;
     margin-bottom: 10px;
@@ -16,19 +17,9 @@
     font-size: 20px; /* Increased font-size */
 }
 
+
 .hover  p{
   display: none;
-  font-family: Futura-Book;
-  position: relative;
-  transition: opacity 0.5s linear;
-  color: #4C535F;
-  font-size: 18px;
-  float: right;
-  padding-top: 28px;
-  padding-bottom: 39px;
-  padding-left: 15px;
-  padding-right: 10px;
-  background-color: #E3E3E5;
 }
 
 
@@ -39,33 +30,21 @@
   font-family: Futura-Book;
   position: relative;
   display:block;
-  left: 140px;
+  left: 120px;
   color: #4C535F;
   font-size: 18px;
   float: right;
-  padding-top: 28px;
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 28px;
   padding-left: 15px;
   padding-right: 10px;
   background-color: #E3E3E5;
-  width: 180px;
+  width: 170px;
 }
 
 
 .hover2  p{
   display: none;
-  font-family: Futura-Book;
-  position: relative;
-  transition: opacity 0.5s linear;
-  color: #4C535F;
-  font-size: 18px;
-  float: right;
-  padding-top: 28px;
-  padding-bottom: 39px;
-  padding-left: 15px;
-  padding-right: 10px;
-  background-color: #E3E3E5;
-
 }
 
 .hover2:hover p {
@@ -75,32 +54,20 @@
   font-family: Futura-Book;
   position: relative;
   display:block;
-  left: 140px;
+  left: 120px;
   color: #4C535F;
   font-size: 18px;
   float: right;
-  padding-top: 28px;
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 28px;
   padding-left: 15px;
   padding-right: 10px;
   background-color: #E3E3E5;
-  width: 180px;
+  width: 170px;
 }
 
 .hover3  p{
   display: none;
-  font-family: Futura-Book;
-  position: relative;
-  transition: opacity 0.5s linear;
-  color: #4C535F;
-  font-size: 18px;
-  float: right;
-  padding-top: 28px;
-  padding-bottom: 39px;
-  padding-left: 15px;
-  padding-right: 10px;
-  background-color: #E3E3E5;
-
 }
 
 .hover3:hover p {
@@ -110,32 +77,21 @@
   font-family: Futura-Book;
   position: relative;
   display:block;
-  left: 140px;
+  left: 120px;
   color: #4C535F;
   font-size: 18px;
   float: right;
-  padding-top: 28px;
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 28px;
   padding-left: 15px;
   padding-right: 10px;
   background-color: #E3E3E5;
-  width: 180px;
+  width: 170px;
 }
 
 
 .hover4  p{
   display: none;
-  font-family: Futura-Book;
-  position: relative;
-  transition: opacity 0.5s linear;
-  color: #4C535F;
-  font-size: 18px;
-  float: right;
-  padding-top: 28px;
-  padding-bottom: 39px;
-  padding-left: 15px;
-  padding-right: 10px;
-  background-color: #E3E3E5;
 }
 
 .hover4:hover p {
@@ -145,32 +101,21 @@
   font-family: Futura-Book;
   position: relative;
   display:block;
-  left: 140px;
+  left: 120px;
   color: #4C535F;
   font-size: 18px;
   float: right;
-  padding-top: 28px;
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 28px;
   padding-left: 15px;
   padding-right: 10px;
   background-color: #E3E3E5;
-  width: 180px;
+  width: 170px;
 }
 
 
 .hover5  p{
   display: none;
-  font-family: Futura-Book;
-  position: relative;
-  transition: opacity 0.5s linear;
-  color: #4C535F;
-  font-size: 18px;
-  float: right;
-  padding-top: 28px;
-  padding-bottom: 39px;
-  padding-left: 15px;
-  padding-right: 10px;
-  background-color: #E3E3E5;
 }
 
 .hover5:hover p {
@@ -180,14 +125,21 @@
   font-family: Futura-Book;
   position: relative;
   display:block;
-  left: 140px;
+  left: 120px;
   color: #4C535F;
   font-size: 18px;
   float: right;
-  padding-top: 28px;
-  padding-bottom: 35px;
+  padding-top: 25px;
+  padding-bottom: 28px;
   padding-left: 15px;
   padding-right: 10px;
   background-color: #E3E3E5;
-  width: 180px;
+  width: 170px;
+}
+
+#logo-nav{
+  cursor: pointer;
+  visibility: hidden;
+  width: 100px;
+  padding-left: 25px;
 }

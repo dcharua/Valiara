@@ -1,0 +1,98 @@
+#fullpage{
+  height: 100%;
+  width: 100%;
+  background-color: #E3E3E5;
+}
+#background-1 {
+	height: 100%;
+	width: 70%;
+	background: url(/images/Ubicacion/1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#info{
+  margin-top: 20%;
+  width: 30%;
+  float: right;
+  margin-left: 20px;
+  text-align: center;
+  font-family: Futura;
+
+  h5{
+      margin-top: 5px;
+      font-size: 1.2em;
+      color: #4C535F;
+  }
+  h4{
+     font-size: 1.2em;
+     margin-bottom: 0;
+  }
+}
+
+#map{
+  position:relative;
+  margin-top: 10%;
+  width: 40%;
+  float: left;
+  margin-left: 20%;
+  img{
+    border: 12px solid rgba(#C4A833, 0.7);
+    width: 500px;
+  }
+}
+#btnmap{
+  margin-left: 12px;
+  margin-top: 12px;
+  position: absolute;
+  button{
+    background-color: #E3E3E5;
+    border: none;
+    display: block;
+    font-size: 9px;
+    width: 80px;
+    text-align: left;
+    font-family: Futura;
+    padding: 5px 0;
+  }
+}
+#ang button{
+  margin-bottom: 5px;
+}
+
+.active{
+  font-family:Futura-heavy !important;
+}
+
+ hr{
+   width: 7%;
+   border: 1px solid #C4A833;
+ }
+
+ /* Change Autocomplete styles in Chrome*/
+ input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus
+ input:-webkit-autofill,
+ textarea:-webkit-autofill,
+ textarea:-webkit-autofill:hover
+ textarea:-webkit-autofill:focus,
+ select:-webkit-autofill,
+ select:-webkit-autofill:hover,
+ select:-webkit-autofill:focus {
+   border: none;
+   border-bottom: 4px solid #ccc;
+   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+   transition: background-color 5000s ease-in-out 0s;
+ }
+ /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+ @media screen and (max-height: 450px) {
+     .overlay a {font-size: 20px}
+     .overlay .closebtn {
+         font-size: 40px;
+         top: 15px;
+         right: 35px;
+     }
+ }
