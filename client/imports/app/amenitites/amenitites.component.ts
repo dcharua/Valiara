@@ -36,11 +36,11 @@ export class AmenititesComponent implements OnInit{
 		openMas(){
 			$("div#verMas").css({"height":"100% "});
 			$("div#mas").css({"display":"none "});
-			$("div#verMasAfter").css({"visibility":"visible "});
+			$("div#verMasAfter").css({"display":"block"});
 		}
 		closeMas(){
 			$("div#verMas").css({"height":"8% "});
 			$("div#mas").css({"display":"block "});
-			$("div#verMasAfter").css({"visibility":"hidden "});
+			$("div#verMasAfter").css({"display":"none"});
 		}
 	}

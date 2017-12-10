@@ -47,7 +47,7 @@ export class NavbarComponent {
 							this.icons[3] = "Ubicacion_Gris.svg"
 						}
 
-						if (event.url == '/Contacto' ){
+						if (event.url == '/contacto' ){
 							this.icons[4] = "Contacto_Amarillo.svg"
 						}else{
 							this.icons[4] = "Contacto_Gris.svg"

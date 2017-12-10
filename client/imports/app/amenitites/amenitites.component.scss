@@ -1,33 +1,6 @@
-.background{
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-	position: fixed;
-}
-
-#background-1 {
-	background: url('/images/Amenitites/1.jpg') no-repeat center center fixed;
-}
-
-#background-2 {
-	background: url('/images/Amenitites/2.jpg') no-repeat center center fixed;
-	.logo-over{
-		position: fixed;
-	  top: 0px !important;
-	  left: 0px !important;
-		width: 100px;
-		padding-left: 25px;
-	}
-	.logo-over img{
-	  width: 100%;
-	}
-}
-
-#background-3 {
-	background: url('/images/Amenitites/3.jpg') no-repeat center center fixed;
+.sliderFull {
+    height: 100%;
+    margin-bottom: 0px;
 }
 
 #icons{
@@ -92,8 +65,11 @@
     text-align: left;
 	}
 	.menos{
-		background-color: #DBDBDB;
-		height: 120px;
+    width: 100%;
+    background-color: #DBDBDB;
+    height: 120px;
+    top: 0;
+    position: absolute;
 	}
 	.menos h4{
 		padding-top: 40px;
@@ -102,5 +78,6 @@
 
 #verMasAfter{
 	cursor: pointer;
-	visibility: hidden;
+	display: none;
+  height: 100%;
 }

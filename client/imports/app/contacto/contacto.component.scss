@@ -5,17 +5,7 @@
   background-color: #F2F2F2;
   text-align: center;
 }
-.btn-contacto{
-    font-size: 1.6em;
-    text-decoration: none;
-    color: #fff;
-    background-color: #C4A833 !important;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
-    font-family: Futura-Medium;
-}
+
 hr{
   width: 7%;
   border: 1px solid #C4A833;
@@ -34,6 +24,10 @@ p{
   color: #4C535F;
   font-size: 1.2em;
   margin-bottom: 3%;
+}
+
+#aviso{
+  margin-bottom: 10px;
 }
 
 

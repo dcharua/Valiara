@@ -22,14 +22,14 @@ export class DepartamentosComponent  implements OnInit{
 		prevSlide(){
 			$('.slider').slider('prev');
 		}
-		// openMas(){
-		// 	$("div#verMas").css({"height":"10% "});
-		// 	$("div#mas").css({"display":"block "});
-		// 	$("div#verMasAfter").css({"visibility":"hidden "});
-		// }
-		// closeMas(){
-		// 	$("div#verMas").css({"height":"100% "});
-		// 	$("div#mas").css({"display":"none "});
-		// 	$("div#verMasAfter").css({"visibility":"visible "});
-		// }
+		openMas(){
+			$("div#mas").css({"display":"none "});
+			$("div#verMasAfter").css({"display":"block"});
+			$("div#verMas").css({"height":"100% "})
+		}
+		closeMas(){
+			$("div#verMasAfter").css({"display":"none "});
+			$("div#mas").css({"display":"block "});
+			$("div#verMas").css({"height":"10% "})
+		}
 }

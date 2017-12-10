@@ -217,18 +217,6 @@ input[type=text]:not(.browser-default):focus:not([readonly])+label{
   width: 65%;
 }
 
-.btn-contacto{
-    font-size: 1.6em;
-    text-decoration: none;
-    color: #fff;
-    background-color: #C4A833 !important;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
-    font-family: Futura-Medium;
-}
-
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
