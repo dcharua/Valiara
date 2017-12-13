@@ -75,3 +75,18 @@ width: 200px;
   padding-right: 5px;
   padding-top: 20px;
 }
+
+
+#mobile{
+  display: none;
+}
+
+
+@media  screen and (max-width : 1024px)  {
+ #web{
+   display: none;
+ }
+ #mobile{
+   display: block;
+ }
+}

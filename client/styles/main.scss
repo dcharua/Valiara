@@ -118,8 +118,8 @@ strong{
    font-size: 1.6em;
    box-shadow: 1px 1px 1px 1px rgba(169, 166, 166, 0.7)
  }
- .websection{
-  text-align: center;  
+ .mobilesection{
+  text-align: center;
   padding: 70px 30px;
  }
 
@@ -128,6 +128,18 @@ strong{
   box-shadow: 1px 1px 1px 1px rgba(169, 166, 166, 0.7);
   padding: 5px 15px;
   margin: 30px 0;
+ }
+
+ .foto-info{
+   float: right;
+   font-family: Futura-Book;
+   padding-top: 10px;
+ }
+
+.btn-web{
+   font-size: 1.5em !important;
+   margin-top: 30px;
+   background-color: #C4A833 !important;
  }
 @keyframes spin {
     0% { transform: rotate(0deg); }

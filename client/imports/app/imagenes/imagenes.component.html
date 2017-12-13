@@ -1,16 +1,42 @@
-<div class="sliderFull">
-				<div class="slider fullscreen">
-					<ul class="slides">
-						<li><img  src="/images/Imagenes/1.jpg">
-							<!-- <div class="imageover"><img src="/logos/Logo_Blanco.svg" ></div></li> -->
-						<li><img  src="/images/Imagenes/2.jpg" ></li>
-						<li><img src="/images/Imagenes/3.jpg"></li>
-            <li><img src="/images/Imagenes/4.jpg"></li>
-            <li><img src="/images/Imagenes/5.jpg"></li>
-					</ul>
-				</div>
-			</div>
-<div id="icons">
-  <img src="/icons/Flecha_Izquierda.svg" class="arrows" (click)="prevSlide()">
-  <img src="/icons/Flecha_Derecha.svg" class="arrows" (click)="nextSlide()">
+<div id="web">
+	<div class="sliderFull">
+		<div class="slider fullscreen">
+			<ul class="slides">
+				<li><img  src="/images/Imagenes/1.jpg">
+					<!-- <div class="imageover"><img src="/logos/Logo_Blanco.svg" ></div> --></li>
+				<li><img  src="/images/Imagenes/2.jpg" ></li>
+				<li><img src="/images/Imagenes/3.jpg"></li>
+        <li><img src="/images/Imagenes/4.jpg"></li>
+        <li><img src="/images/Imagenes/5.jpg"></li>
+			</ul>
+		</div>
+	</div>
+	<div id="icons">
+	  <img src="/icons/Flecha_Izquierda.svg" class="arrows" (click)="prevSlide()">
+	  <img src="/icons/Flecha_Derecha.svg" class="arrows" (click)="nextSlide()">
+	</div>
+</div>
+
+
+
+
+<div id="mobile" class="mobilesection">
+	<h5 class="center-align title-mob">IMÁGENES</h5>
+	<div class="box" style="padding: 15px 15px">
+		<div class="slider">
+			<ul class="slides">
+				<li><img  src="/images/Imagenes/1.jpg"> <h5 class="foto-info">VISTA AÉREA</h5></li>
+				<li><img  src="/images/Imagenes/2.jpg"> <h5 class="foto-info">VISTA AÉREA</h5></li>
+				<li><img src="/images/Imagenes/3.jpg"> <h5 class="foto-info">VISTA AÉREA</h5></li>
+				<li><img src="/images/Imagenes/4.jpg"><h5 class="foto-info">VISTA AÉREA</h5></li>
+				<li><img src="/images/Imagenes/5.jpg"><h5 class="foto-info">VISTA AÉREA</h5></li>
+			</ul>
+		</div>
+		<div id="icons">
+			<img src="/icons/Flecha_Izquierda.svg" class="arrows left" (click)="prevSlide()">
+			<img src="/icons/Flecha_Derecha.svg" class="arrows right" (click)="nextSlide()">
+		</div>
+	</div>
+	<button class="btn-contacto btn-large btn-web center-align" (click)="openNav()">¡ESTOY INTERESADO!</button>
+	<overlay></overlay>
 </div>

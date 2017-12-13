@@ -29,9 +29,13 @@ export class AmenititesComponent implements OnInit{
 
 		nextSlide(){
 			$('.slider').slider('next')
+			$('.slider').slider('pause');
+			$('.slider').slider('start');
 		}
 		prevSlide(){
 			$('.slider').slider('prev');
+			$('.slider').slider('pause');
+			$('.slider').slider('start');  
 		}
 		openMas(){
 			$("div#verMas").css({"height":"100% "});

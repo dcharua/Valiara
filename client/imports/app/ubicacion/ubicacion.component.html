@@ -1,22 +1,43 @@
-<div id="fullpage">
-  <div id="info">
-    <div id="angelopolis">
-       <h4 class="titulo">LOMAS DE  ANGELÓPOLIS</h4>
-       <hr>
-       <br>
-       <h5>Cascatta II</h5>
-       <h5>Mazatlán 5, Parque Sinaloa</h5>
-       <h5>Santa Clara Ocoyucan, Puebla</h5>
+<div id="web">
+  <div id="fullpage">
+    <div id="info">
+      <div id="angelopolis">
+         <h4 class="titulo">LOMAS DE  ANGELÓPOLIS</h4>
+         <hr>
+         <br>
+         <h5>Cascatta II</h5>
+         <h5>Mazatlán 5, Parque Sinaloa</h5>
+         <h5>Santa Clara Ocoyucan, Puebla</h5>
+      </div>
     </div>
+
+    <div id="map">
+      <div id="btnmap">
+        <button type="button" id="btnang" class="active" style="margin-bottom:5px;" (click) = "angelopolis()">&nbsp; Angelopolis</button>
+        <button type="button" id="btnsin" (click) = "sinaloa()">&nbsp; Parque Sinaloa</button>
+      </div>
+      <img src="/images/Ubicacion/Mapa_Angelopolis.jpg" id="imgmap">
+    </div>
+    <div id="background-1"></div>
   </div>
+</div>
+
+<div id="mobile" class="mobilesection">
+	 <h5 class="center-align title-mob">UBICACIÓN</h5>
+   <div class="box" id="angelopolis">
+      <h4 class="titulo">Lomas de  Angelópolis</h4>
+      <hr>
+      <h5 class="address" style="margin-top:20px;">Cascatta II</h5>
+      <h5 class="address">Mazatlán 5, Parque Sinaloa</h5>
+      <h5 class="address">Santa Clara Ocoyucan, Puebla</h5>
+   </div>
+
 
   <div id="map">
     <div id="btnmap">
-      <button type="button" id="btnang" class="active" style="margin-bottom:5px;" (click) = "angelopolis()">&nbsp; Angelopolis</button>
-      <button type="button" id="btnsin" (click) = "sinaloa()">&nbsp; Parque Sinaloa</button>
+      <button type="button" id="btnang-mob" class="active" style="margin-bottom:5px;" (click) = "angelopolis()">&nbsp; Angelopolis</button>
+      <button type="button" id="btnsin-mob" (click) = "sinaloa()">&nbsp; Parque Sinaloa</button>
     </div>
     <img src="/images/Ubicacion/Mapa_Angelopolis.jpg" id="imgmap">
   </div>
-  <div id="background-1"></div>
-
 </div>

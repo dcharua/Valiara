@@ -1,13 +1,13 @@
 <div id="web">
 	<div class="sliderFull">
-					<div class="slider fullscreen">
-						<ul class="slides">
-							<li><img  src="/images/Amenitites/1.jpg"></li>
-							<li><img  src="/images/Amenitites/2.jpg" ></li>
-							<li><img src="/images/Amenitites/3.jpg"></li>
-						</ul>
-					</div>
-				</div>
+		<div class="slider fullscreen">
+			<ul class="slides">
+				<li><img  src="/images/Amenitites/1.jpg"></li>
+				<li><img  src="/images/Amenitites/2.jpg" ></li>
+				<li><img src="/images/Amenitites/3.jpg"></li>
+			</ul>
+		</div>
+	</div>
 	<div id="icons">
 	  <img src="/icons/Flecha_Izquierda.svg" class="arrows" (click)="prevSlide()">
 	  <img src="/icons/Flecha_Derecha.svg" class="arrows" (click)="nextSlide()">
@@ -41,7 +41,7 @@
 	</div>
 </div>
 
-<div id="mobile" class="websection">
+<div id="mobile" class="mobilesection">
 	 <h5 class="center-align title-mob">AMENITIES</h5>
 	 <div class="left-align box">
 	 <p>Disfruta del asoleadero con mesas, jacuzzi, bar y un área de relajación que no podrás resistir.</p>
@@ -53,8 +53,8 @@
 	<div class="slider">
 		<ul class="slides">
 			<li><img  src="/images/Amenitites/1.jpg"> <h5 class="foto-info">ASOLIADERO</h5></li>
-			<li><img  src="/images/Amenitites/2.jpg" ></li>
-			<li><img src="/images/Amenitites/3.jpg"></li>
+			<li><img  src="/images/Amenitites/2.jpg"> <h5 class="foto-info">ASOLIADERO</h5></li>
+			<li><img src="/images/Amenitites/3.jpg"> <h5 class="foto-info">ASOLIADERO</h5></li>
 		</ul>
 	</div>
 	<div id="icons">
@@ -63,6 +63,6 @@
 	</div>
 </div>
 
-	 <button class="btn-contacto btn-large center-align" style="font-size: 1.5em;" (click)="openNav()">¡ESTOY INTERESADO!</button>
+	 <button class="btn-contacto btn-large btn-web center-align" (click)="openNav()">¡ESTOY INTERESADO!</button>
 	 <overlay></overlay>
 </div>

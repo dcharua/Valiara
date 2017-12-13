@@ -68,28 +68,46 @@
    border: 1px solid #C4A833;
  }
 
- /* Change Autocomplete styles in Chrome*/
- input:-webkit-autofill,
- input:-webkit-autofill:hover,
- input:-webkit-autofill:focus
- input:-webkit-autofill,
- textarea:-webkit-autofill,
- textarea:-webkit-autofill:hover
- textarea:-webkit-autofill:focus,
- select:-webkit-autofill,
- select:-webkit-autofill:hover,
- select:-webkit-autofill:focus {
-   border: none;
-   border-bottom: 4px solid #ccc;
-   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-   transition: background-color 5000s ease-in-out 0s;
+
+ #mobile{
+   display: none;
  }
- /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
- @media screen and (max-height: 450px) {
-     .overlay a {font-size: 20px}
-     .overlay .closebtn {
-         font-size: 40px;
-         top: 15px;
-         right: 35px;
-     }
- }
+
+
+ @media  screen and (max-width : 1024px)  {
+  #web{
+    display: none;
+  }
+  #mobile{
+    display: block;
+  }
+  h4{
+    margin-top: 20px;
+     font-size: 1.5em;
+     margin-bottom: 0;
+  }
+
+  hr{
+    width: 25%;
+    border: 1px solid #C4A833;
+  }
+  .address{
+    font-size: 1.4em;
+    color: #4C535F;
+  }
+
+  #map {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    img{
+      width: 100%;
+    }
+  }
+  #btnmap{
+    button{
+      font-size: 15px;
+      width: 130px;
+    }
+  }
+}

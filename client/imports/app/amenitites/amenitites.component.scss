@@ -84,6 +84,8 @@
 #mobile{
   display: none;
 }
+
+
 @media  screen and (max-width : 1024px)  {
  #web{
    display: none;
@@ -95,9 +97,6 @@
    height: 400px !important;
  }
 
-  .foto-info{
-    
-  }
  #icons{
    position: relative;
    bottom: 200px;

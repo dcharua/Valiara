@@ -18,8 +18,18 @@ export class ImagenesComponent implements OnInit{
 
 		nextSlide(){
 			$('.slider').slider('next')
+			$('.slider').slider('pause');
+			$('.slider').slider('start');
 		}
 		prevSlide(){
 			$('.slider').slider('prev');
+			$('.slider').slider('pause');
+			$('.slider').slider('start');
 		}
+
+	openNav(){
+		$("div#city, div#logo").css({"display":"block"});
+		$("div#over").css({"width":"100% "});
+	}
+
 }

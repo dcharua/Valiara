@@ -14,6 +14,7 @@ export class DepartamentosComponent  implements OnInit{
 	public departamentoSlug: string;
 	public departamentos: Array<Departamento>;
 	public departamento: Departamento;
+	public imgbool: boolean;
 
 	constructor(){
 	this.departamentos = [
@@ -40,7 +41,7 @@ export class DepartamentosComponent  implements OnInit{
 
 	ngOnInit() {
 		this.departamento = this.departamentos[0];
-
+		this.imgbool = true;
 		 $('.slider').slider();
 		 $('.slider').slider('start');
 		}
@@ -58,15 +59,19 @@ export class DepartamentosComponent  implements OnInit{
 			$("#TIPO1A").addClass('active');
 			$("div#btnbp").css({"visibility":"visible"});
 			$('#estudio').text('Estudio')
+			$("#estudio").addClass('active');
 			$('#recamara').text('Recamara')
+			$("#recamara").removeClass('active');
 		}
 		if (num==2){
 			this.departamento = this.departamentos[2];
 			$("#TIPO1A, #GH1A" ).removeClass('active');
 			$("#LOFTA").addClass('active');
 			$("div#btnbp").css({"visibility":"visible"});
-		 	$('#estudio').text('PB')
+			$('#estudio').text('PB')
+			$("#estudio").addClass('active');
 			$('#recamara').text('PA')
+			$("#recamara").removeClass('active');
 		}
 	}
 
@@ -149,9 +154,13 @@ export class DepartamentosComponent  implements OnInit{
 
 	nextSlide(){
 		$('.slider').slider('next')
+		$('.slider').slider('pause');
+		$('.slider').slider('start');
 	}
 	prevSlide(){
 		$('.slider').slider('prev');
+		$('.slider').slider('pause');
+		$('.slider').slider('start');
 	}
 	openMas(){
 		$("div#mas").css({"display":"none "});
@@ -167,4 +176,109 @@ export class DepartamentosComponent  implements OnInit{
 	openNav() {
 		$("div#over").css({"width":"100% "});
 	}
+
+	// mobile
+
+
+	toggleMobile(opt){
+		if (opt ==2){
+			$("div#departamentosTA").css({"display":"none "});
+			$("div#departamentosTB").css({"display":"block "});
+			$("div#acabadosinfo-mobile").css({"display":"none "});
+			$("div#departamentosinfo-mobile").css({"display":"block"});
+			$("#torreB-mobile").addClass('activeh4');
+			$("#torreA-mobile, #acabados-mobile").removeClass('activeh4');
+			this.departamento = this.departamentos[3];
+			$("div#btnbpM").css({"visibility":"hidden"});
+		}else{
+			$("div#departamentosTB").css({"display":"none "});
+			$("div#departamentosTA").css({"display":"block "});
+			$("div#acabadosinfo-mobile").css({"display":"none "});
+			$("div#departamentosinfo-mobile").css({"display":"block"});
+			$("#torreA-mobile").addClass('activeh4');
+			$("#torreB-mobile, #acabados-moblie").removeClass('activeh4');
+			this.departamento = this.departamentos[0];
+		}
+	}
+	toggleAcabadosM(){
+		$("div#acabadosinfo-mobile").css({"display":"block "});
+		$("div#departamentosinfo-mobile").css({"display":"none"});
+		$("#torreA-mobile, #torreB-mobile").removeClass('activeh4');
+		$("#acabados-moblie").addClass('activeh4');
+	}
+
+	openDep(){
+		if(this.imgbool){
+		$("div#departamentosinfo-mobile").css({"display":"block"});
+		$("#arrow-web").attr("src","/icons/Flecha_Arriba_Azul.svg");
+		this.imgbool = false;
+	}else{
+		$("div#departamentosinfo-mobile").css({"display":"none"});
+		$("#arrow-web").attr("src","/icons/Flecha_Abajo_Azul.svg");
+		this.imgbool = true;
+		}
+	}
+
+	switchDepartamentosM(num){
+		if (num==0){
+			this.departamento = this.departamentos[0];
+			$("#TIPO1Am, #LOFTAm" ).removeClass('active');
+			$("#GH1Am").addClass('active');
+			$("div#btnbpM").css({"visibility":"hidden"});
+		}
+		if (num==1){
+			this.departamento = this.departamentos[1];
+			$("#GH1Am, #LOFTAm" ).removeClass('active');
+			$("#TIPO1Am").addClass('active');
+			$("div#btnbpM").css({"visibility":"visible"});
+			$('#estudioM').text('Estudio')
+			$("#estudioM").addClass('active');
+			$('#recamaraM').text('Recamara')
+			$("#recamaraM").removeClass('active');
+		}
+		if (num==2){
+			this.departamento = this.departamentos[2];
+			$("#TIPO1Am, #GH1Am" ).removeClass('active');
+			$("#LOFTAm").addClass('active');
+			$("div#btnbpM").css({"visibility":"visible"});
+			$('#estudioM').text('PB')
+			$("#estudioM").addClass('active');
+			$('#recamaraM').text('PA')
+			$("#recamaraM").removeClass('active');
+		}
+	}
+
+	switchDepartamentosBM(num){
+		if (num==1){
+			this.departamento = this.departamentos[3];
+			$("#GH2Bm, #GH3Bm, #TIPO1Bm, #TIPO2Bm, #TIPO3Bm").removeClass('active');
+			$("#GH1Bm").addClass('active');
+		}
+		if (num==2){
+			this.departamento = this.departamentos[4];
+			$("#GH1Bm, #GH3Bm, #TIPO1Bm, #TIPO2Bm, #TIPO3Bm").removeClass('active');
+			$("#GH2Bm").addClass('active');
+		}
+		if (num==3){
+			this.departamento = this.departamentos[5];
+			$("#GH1Bm, #GH2Bm, #TIPO1Bm, #TIPO2Bm, #TIPO3Bm").removeClass('active');
+			$("#GH3Bm").addClass('active');
+		}
+		if (num==4){
+			this.departamento = this.departamentos[6];
+			$("#GH1Bm, #GH2Bm, #GH3Bm, #TIPO2Bm, #TIPO3Bm").removeClass('active');
+			$("#TIPO1Bm").addClass('active');
+		}
+		if (num==5){
+			this.departamento = this.departamentos[7];
+			$("#GH1Bm, #GH2Bm, #GH3Bm, #TIPO1Bm, #TIPO3Bm").removeClass('active')
+			$("#TIPO2Bm").addClass('active');
+		}
+		if (num==6){
+			this.departamento = this.departamentos[8];
+			$("#GH1Bm, #GH2Bm, #GH3Bm, #TIPO1Bm, #TIPO2Bm").removeClass('active');
+			$("#TIPO3Bm").addClass('active');
+		}
+	}
+
 }

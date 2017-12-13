@@ -20,39 +20,51 @@ export class NavbarComponent {
 						if (event.url != '/' ) {
 							this.icons[5] = "HomeGris.svg";
 							$('#logo-nav, #logo-mob').css('visibility', 'visible');
+							$("#home").removeClass('active');
 						}else{
 							this.icons[5] = "HomeAmarillo.svg";
 							$('#logo-nav, #logo-mob').css('visibility', 'hidden');
+							$("#home").addClass('active');
 						}
 
 						if (event.url == '/amenitites' ){
 							this.icons[0] = "Amenities_Amarillo.svg"
+							$("#amenitites").addClass('active');
 						}else{
 							this.icons[0] = "Amenities_Gris.svg"
+							$("#amenitites").removeClass('active');
 						}
 
 						if (event.url == '/departamentos' ){
 							this.icons[1] = "Departamentos_Amarillo.svg"
+							$("#departamentos").addClass('active');
 						}else{
 							this.icons[1] = "Departamentos_Gris.svg"
+							$("#departamentos").removeClass('active');
 						}
 
 						if (event.url == '/imagenes' ){
 							this.icons[2] = "Imagenes_Amarillo.svg"
+							$("#imagenes").addClass('active');
 						}else{
 							this.icons[2] = "Imagenes_Gris.svg"
+							$("#imagenes").removeClass('active');
 						}
 
 						if (event.url == '/ubicacion' ){
 							this.icons[3] = "Ubicacion_Amarillo.svg"
+							$("#ubicacion").addClass('active');
 						}else{
 							this.icons[3] = "Ubicacion_Gris.svg"
+							$("#ubicacion").removeClass('active');
 						}
 
 						if (event.url == '/contacto' ){
 							this.icons[4] = "Contacto_Amarillo.svg"
+							$("#contacto").addClass('active');
 						}else{
 							this.icons[4] = "Contacto_Gris.svg"
+							$("#contacto").removeClass('active');
 						}
 					}
 			});
