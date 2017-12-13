@@ -43,4 +43,9 @@ export class AmenititesComponent implements OnInit{
 			$("div#mas").css({"display":"block "});
 			$("div#verMasAfter").css({"display":"none"});
 		}
+
+		openNav(){
+			$("div#city, div#logo").css({"display":"block"});
+			$("div#over").css({"width":"100% "});
+		}
 	}

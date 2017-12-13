@@ -18,72 +18,27 @@
     (55) 5257 2092<br>
     bernardo@nexosin.com</p>
     <button class="btn-contacto btn-large"  (click)="openNav()">¡ESTOY INTERESADO!</button>
-    <p id="aviso">Aviso de Privacidad</p>
+    <p id="aviso" (click)="openAviso()">Aviso de Privacidad</p>
 </div>
 
-<!-- The overlay -->
-<div id="city" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+<overlay></overlay>
+<div id="privacidad">
+  <img src="/icons/Flecha_Abajo_Gris.svg" class ="arrow-down" (click)="closeAviso()">
   <div class="logo"><img src="/logos/Logo_Blanco.svg" alt="Valeria" ></div>
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <h3>¿Dondé estás?</h3>
-    <hr>
-    <div class="row">
-      <label class="container">Puebla
-        <input type="checkbox" (click) ="openContact()">
-        <span class="checkmark"></span>
-      </label>
+  <p>Estos materiales no tienen la intención de ser una oferta de venta, o la solicitud de compra de una unidad en el condominio. Dicha oferta sólo se hará de conformidad con el folleto (circular de oferta) para el
+  condominio y no se debe confiar en ninguna declaración a menos que se haga en el folleto o en el acuerdo de compra aplicable. En ningún caso se realizará ninguna solicitación, oferta o venta de una unidad en el condominio
+  en, ni a residentes de, ningún estado o país en el cual dicha actividad sería ilegal. Ningún corredor o vendedor de bienes raíces está autorizado a hacer representaciones u otras declaraciones con respecto a este
+  proyecto, y ningún acuerdo con, los depósitos pagados u otros arreglos hechos con cualquier corredor de bienes raíces son o serán obligatorios para el desarrollador. Todos los diseños, planos, bocetos, materiales
+  gráficos, precios, especificaciones, términos, condiciones, declaraciones, características, dimensiones, comodidades, vistas existentes o futuras y fotos representadas o descritas aquí se proponen y son conceptuales y
+  se basan en planes preliminares de desarrollo, los cuales están sujetos a revisiones y otros cambios, sin previo aviso, de la manera prevista en el contrato de compra y en la circular de oferta. Todas las características
+  listadas para las residencias son sólo representativas, y el Desarrollador se reserva el derecho, sin previo aviso o aprobación por parte del Comprador, de realizar cambios o sustituciones de igual o mejor calidad de
+  características, materiales y equipos que se incluyen con la unidad. Las dimensiones de unidades indicadas o mostradas en los folletos variarán de las dimensiones finales, las cuales serán determinadas al completarse
+  el proyecto. Cualquier vista desde cualquier unidad o de otras partes de la propiedad puede en el futuro ser limitada o eliminada por el desarrollo futuro o fuerzas de la naturaleza. Alentamos y apoyamos el ideal en
+  el cual no hay barreras para obtener vivienda debido a raza, color, sexo, religión, discapacidad, estatus familiar o de origen nacional.</p>
 
-      <label class="container">Cuidad de México
-        <input type="checkbox">
-        <span class="checkmark"  (click) ="openContact()"></span>
-      </label>
-  </div>
+
+<a href="www.wearebolt.co"><img src="logos/DesignedbyBolt.svg"></a>
+
+
+
 </div>
-
-<div id="contact" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" (click)="closeContact()">&times;</a>
-  <div class="logo"><img src="/logos/Logo_Blanco.svg" alt="Valeria" ></div>
-
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <h3>Deja tus datos y nos contactaremos contigo</h3>
-    <hr>
-
-    <div class="form">
-      <form class="col s12 center-align">
-
-        <div class="row">
-          <div class="input-field col s12 m5">
-              <img src="/icons/Icono_Contacto.svg" class="material-icons prefix">
-              <input id="nombre" type="text" class="validate">
-              <label for="icon_prefix">Nombre Completo</label>
-            </div>
-            <div class="input-field col m1"></div>
-            <div class="input-field col s12 m5">
-                <img src="/icons/Icono_Mail.svg" class="material-icons prefix">
-                <input id="mail" type="text" class="validate">
-                <label for="icon_prefix">E-mail</label>
-              </div>
-        </div>
-
-        <div class="row">
-          <div class="input-field  col s12 m5">
-              <img src="/icons/Icono_Telefono.svg" class="material-icons prefix">
-              <input id="telefono" type="text" class="validate">
-              <label for="icon_prefix">Teléfono</label>
-            </div>
-        </div>
-
-        <button class="btn-contacto btn-large" type="submit" name="action">¡QUIERO MI CASA!</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Use any element to open/show the overlay navigation menu -->

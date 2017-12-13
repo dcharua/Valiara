@@ -1,0 +1,57 @@
+<!-- The overlay -->
+  <div class="overlay" id="over">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <div id="logo" class="logo"><img src="/logos/Logo_Blanco.svg" alt="Valeria" ></div>
+    <!-- Overlay content -->
+    <div class="overlay-content" id="city" >
+      <h3>¿Dondé estás?</h3>
+      <hr>
+      <div class="row">
+        <label class="container">Puebla
+          <input type="checkbox"   id="Puebla" (click) ="openContact()">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Cuidad de México
+          <input type="checkbox" id="CDMX" (click) ="openContact()">
+          <span class="checkmark"  ></span>
+        </label>
+    </div>
+  </div>
+
+  <div id="contact">
+
+      <div class="form">
+        <form class="col s12 center-align">
+
+          <div class="row">
+            <div class="input-field col s12 m5">
+                <img src="/icons/Icono_Contacto.svg" class="material-icons prefix">
+                <input id="nombre" type="text" class="validate">
+                <label for="icon_prefix">Nombre Completo</label>
+              </div>
+              <div class="input-field col m1"></div>
+              <div class="input-field col s12 m5">
+                  <img src="/icons/Icono_Mail.svg" class="material-icons prefix">
+                  <input id="mail" type="text" class="validate">
+                  <label for="icon_prefix">E-mail</label>
+                </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field  col s12 m5">
+                <img src="/icons/Icono_Telefono.svg" class="material-icons prefix">
+                <input id="telefono" type="text" class="validate">
+                <label for="icon_prefix">Teléfono</label>
+              </div>
+          </div>
+
+          <button class="btn-contacto btn-large" type="submit" name="action">¡QUIERO MI CASA!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use any element to open/show the overlay navigation menu -->

@@ -1,59 +1,112 @@
-<div class="icon-bar">
-	<div id="logo-nav" [routerLink]="['/']" [routerLinkActive]="['active']"><img src="/logos/Logo_Gris.svg" alt="Valeria" >
-</div>
-	<div class="hover row " style="position:relative;">
-		<a [routerLink]="['/amenitites']" [routerLinkActive]="['active']" title="amenitites">
-			<div class="col" style="width:132px;">
-				<img [src]="'/icons/'+icons[0]" alt="Amenities" style="width: 80%; height: 80%;">
-
-			</div>
-			<div class="col" style="width:180px; position:absolute; top:0;">
-				<p>AMENITITES</p>
-			</div>
-	  </a>
+<div id="web">
+	<div class="icon-bar">
+		<div id="logo-nav" [routerLink]="['/']" [routerLinkActive]="['active']"><img src="/logos/Logo_Gris.svg" alt="Valeria" >
 	</div>
+		<div class="hover row " style="position:relative;">
+			<a [routerLink]="['/amenitites']" [routerLinkActive]="['active']" title="amenitites">
+				<div class="col" style="width:132px;">
+					<img [src]="'/icons/'+icons[0]" alt="Amenities" style="width: 80%; height: 80%;">
 
-	<div class="hover2 row" style="position:relative;">
-		<a [routerLink]="['/departamentos']" [routerLinkActive]="['active']">
-			<div class="col" style="width:132px;">
-				<img [src]="'/icons/'+icons[1]" alt="Departamentos" style="width: 80%; height: 80%;">
-			</div>
-			<div class="col" style="width:180px; position:absolute; top:0;">
-				<p>DEPARTAMENTOS</p>
-			</div>
-		</a>
+				</div>
+				<div class="col" style="width:180px; position:absolute; top:0;">
+					<p>AMENITITES</p>
+				</div>
+		  </a>
+		</div>
+
+		<div class="hover2 row" style="position:relative;">
+			<a [routerLink]="['/departamentos']" [routerLinkActive]="['active']">
+				<div class="col" style="width:132px;">
+					<img [src]="'/icons/'+icons[1]" alt="Departamentos" style="width: 80%; height: 80%;">
+				</div>
+				<div class="col" style="width:180px; position:absolute; top:0;">
+					<p>DEPARTAMENTOS</p>
+				</div>
+			</a>
+	 </div>
+
+	 <div class="hover3 row" style="position:relative;">
+		<a [routerLink]="['/imagenes']" [routerLinkActive]="['active']">
+				<div class="col" style="width:132px;">
+					<img [src]="'/icons/'+icons[2]" alt="Imagenes" style="width: 80%; height: 80%;">
+				</div>
+				<div class="col" style="width:180px; position:absolute; top:0;">
+					<p>IMÁGENES</p>
+				</div>
+			</a>
+	  </div>
+
+		<div class="hover4 row" style="position:relative;">
+			<a [routerLink]="['/ubicacion']" [routerLinkActive]="['active']">
+				<div class="col" style="width:132px;">
+					<img [src]="'/icons/'+icons[3]"alt="Ubicacion" style="width: 80%; height: 80%;">
+				</div>
+				<div class="col" style="width:180px; position:absolute; top:0;">
+					<p>UBICACIÓN</p>
+				</div>
+			</a>
+	 </div>
+
+	 <div class="hover5 row" style="position:relative; margin-bottom:0">
+		 <a [routerLink]="['/contacto']" [routerLinkActive]="['active']">
+				<div class="col" style="width:132px;">
+					<img [src]="'/icons/'+icons[4]" alt="Contacto" style="width: 80%; height: 80%;">
+				</div>
+				<div class="col" style="width:180px; position:absolute; top:0;">
+					<p>CONTACTO</p>
+				</div>
+			</a>
+	 </div>
+	 </div>
  </div>
 
- <div class="hover3 row" style="position:relative;">
-	<a [routerLink]="['/imagenes']" [routerLinkActive]="['active']">
-			<div class="col" style="width:132px;">
-				<img [src]="'/icons/'+icons[2]" alt="Imagenes" style="width: 80%; height: 80%;">
-			</div>
-			<div class="col" style="width:180px; position:absolute; top:0;">
-				<p>IMÁGENES</p>
-			</div>
-		</a>
-  </div>
-
-	<div class="hover4 row" style="position:relative;">
-		<a [routerLink]="['/ubicacion']" [routerLinkActive]="['active']">
-			<div class="col" style="width:132px;">
-				<img [src]="'/icons/'+icons[3]"alt="Ubicacion" style="width: 80%; height: 80%;">
-			</div>
-			<div class="col" style="width:180px; position:absolute; top:0;">
-				<p>UBICACIÓN</p>
-			</div>
-		</a>
- </div>
-
- <div class="hover5 row" style="position:relative; margin-bottom:0">
-	 <a [routerLink]="['/contacto']" [routerLinkActive]="['active']">
-			<div class="col" style="width:132px;">
-				<img [src]="'/icons/'+icons[4]" alt="Contacto" style="width: 80%; height: 80%;">
-			</div>
-			<div class="col" style="width:180px; position:absolute; top:0;">
-				<p>CONTACTO</p>
-			</div>
-		</a>
- </div>
+ <div id="mobile">
+	 <div class="valign-wrapper" id="navbar">
+		 <div id="logo-mob" [routerLink]="['/']" [routerLinkActive]="['active']"><img src="/logos/Logo_Gris.svg" alt="Valeria" >
+ 	</div>
+		 <a class="openbtn valign" id="burger-white" (click)="openNav()" style="width: 25px;">
+	 		<img class="menu-icon" src="/mobile/Iconos/hamburguesa_blanca.svg" alt="menu">
+	 	</a>
+	</div>
+	<div class="valign-wrapper" id="sidenav">
+	  	<a class="closebtn" (click)="closeNav()"><img src="/mobile/Iconos/cross.svg" alt="close"></a>
+	  	<div class="valign" id="links">
+				<div class="row">
+					<a [routerLink]="['/']" [routerLinkActive]="['active']" title="home"  (click)="closeNav()">
+						<img [src]="'/icons/'+icons[5]" alt="" class ="mobileicon">
+						<h5>HOME</h5>
+					</a>
+				</div>
+				<div class="row">
+					<a [routerLink]="['/amenitites']" [routerLinkActive]="['active']" title="amenitites"  (click)="closeNav()">
+						<img [src]="'/icons/'+icons[0]" alt="" class ="mobileicon">
+						<h5>AMENITITES</h5>
+					</a>
+				</div>
+				<div class="row">
+					<a [routerLink]="['/departamentos']" [routerLinkActive]="['active']" title="departamentos"  (click)="closeNav()">
+						<img [src]="'/icons/'+icons[1]" alt="" class ="mobileicon">
+						<h5>DEPARTAMENTOS</h5>
+					</a>
+				</div>
+				<div class="row">
+					<a [routerLink]="['/imagenes']" [routerLinkActive]="['active']" title="imagenes"  (click)="closeNav()">
+						<img [src]="'/icons/'+icons[2]" alt="" class ="mobileicon">
+						<h5>IMÁGENES</h5>
+					</a>
+				</div>
+				<div class="row">
+					<a [routerLink]="['/ubicacion']" [routerLinkActive]="['active']" title="ubicacion"  (click)="closeNav()">
+						<img [src]="'/icons/'+icons[3]" alt="" class ="mobileicon">
+						<h5>UBICACIÓN</h5>
+					</a>
+				</div>
+				<div class="row">
+					<a [routerLink]="['/contacto']" [routerLinkActive]="['active']" title="contacto" (click)="closeNav()">
+						<img [src]="'/icons/'+icons[4]" alt="" class ="mobileicon">
+						<h5>CONTACTO</h5>
+					</a>
+				</div>
+	  	</div>
+	</div>
  </div>

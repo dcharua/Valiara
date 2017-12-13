@@ -11,6 +11,7 @@ import { DepartamentosComponent } from './departamentos/departamentos.component'
 import { ImagenesComponent } from './imagenes/imagenes.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { OverlayComponent } from './overlay/overlay.component';
 
 @NgModule({
     // Components, Pipes, Directive
@@ -22,7 +23,8 @@ import { ContactoComponent } from './contacto/contacto.component';
         DepartamentosComponent,
         ImagenesComponent,
         UbicacionComponent,
-        ContactoComponent
+        ContactoComponent,
+        OverlayComponent
     ],
     // Entry Components
     entryComponents: [

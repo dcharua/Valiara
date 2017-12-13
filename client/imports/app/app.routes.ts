@@ -8,6 +8,7 @@ import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
 
+
 export const routes: Route[] = [
 	{ path: '', component: HomeComponent },
 	{ path: 'amenitites', component: AmenititesComponent},

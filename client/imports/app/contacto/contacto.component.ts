@@ -10,21 +10,16 @@ declare var $:any;
 	styles: [ style ]
 })
 export class ContactoComponent {
-	openNav() {
-		$("div#city").css({"width":"100% "});
-		$("div#city").css({"height":"100% "});
-	}
 
-	closeNav() {
-		$("div#city").css({"width":"0%"});
-	}
+		openNav() {
+			$("div#over").css({"width":"100% "});
+		}
 
-	openContact() {
-		$("div#city").css({"height":"0%"});
-		$("div#contact").css({"width":"100%"});
-	}
+		openAviso(){
+			$("div#privacidad").css({"height":"100%","display":"block"});
+		}
 
-	closeContact() {
-		$("div#contact").css({"width":"0%"});
-	}
+		closeAviso(){
+		$("div#privacidad").css({"height":"0%","display":"none"});
+		}
 }

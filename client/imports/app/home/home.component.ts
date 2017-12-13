@@ -1,4 +1,4 @@
-import { Component, HostListener, AfterViewInit} from '@angular/core';
+import { Component, HostListener, AfterViewInit, OnInit} from '@angular/core';
 import { Router, ActivatedRoute, Params, NavigationEnd } from '@angular/router';
 import template from './home.component.html';
 import style from './home.component.scss';
@@ -11,7 +11,7 @@ declare var moment:any;
 	template,
 	styles: [ style ]
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit,  OnInit {
 	public previousUrl: string;
 
 	constructor(
@@ -21,21 +21,30 @@ export class HomeComponent {
 		this.previousUrl = '.';
 	}
 
-	openNav() {
-		$("div#city").css({"width":"100% "});
-		$("div#city").css({"height":"100% "});
+	 checkScreenSize(){
+		if($(window).width() < 1024) {
+				$("#logohome").attr("src", "/logos/Logo_Blanco.svg");
+		} else {
+				$("#logohome").attr("src", "/logos/Logo_Gris.svg");
+		}
+ }
+
+	openNav(){
+		$("div#city, div#logo").css({"display":"block"});
+		$("div#over").css({"width":"100% "});
 	}
 
-	closeNav() {
-		$("div#city").css({"width":"0%"});
+	ngOnInit(){
+		 this.checkScreenSize();
 	}
+	ngAfterViewInit(){
+	$(window).on("resize", function () {
+		if($(window).width() < 1024) {
+				$("#logohome").attr("src", "/logos/Logo_Blanco.svg");
+		} else {
+				$("#logohome").attr("src", "/logos/Logo_Gris.svg");
+		}
+	 });
+ }
 
-	openContact() {
-		$("div#city").css({"height":"0%"});
-		$("div#contact").css({"width":"100%"});
-	}
-
-	closeContact() {
-		$("div#contact").css({"width":"0%"});
-	}
 }

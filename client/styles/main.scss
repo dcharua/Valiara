@@ -46,9 +46,13 @@
 body, html {
   	padding: 0;
   	margin: 0;
-    background-color: #FFFFFF;
+    background-color: #F2F2F2;
     height: 100%;
     width: 100%;
+}
+
+p{
+  font-family: Futura;
 }
 strong{
   font-family:Futura-heavy !important;
@@ -86,6 +90,45 @@ strong{
     animation: spin 2s linear infinite;
 }
 
+.nomargin{
+  margin: 0 !important;
+}
+ .crusor{
+   cursor: pointer;
+ }
+
+ .imageover{
+  position: absolute;
+  top:0;
+  width: 100px;
+  padding-left: 25px;
+  img{
+    width: 75px;
+    height: auto;
+  }
+ }
+
+ .title-mob{
+   width: 100%;
+   background-color: #CECECE;
+   text-align: center;
+   margin-top: 16px;
+   font-family: Futura-Book;
+   padding: 12px;
+   font-size: 1.6em;
+   box-shadow: 1px 1px 1px 1px rgba(169, 166, 166, 0.7)
+ }
+ .websection{
+  text-align: center;  
+  padding: 70px 30px;
+ }
+
+ .box{
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px rgba(169, 166, 166, 0.7);
+  padding: 5px 15px;
+  margin: 30px 0;
+ }
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }

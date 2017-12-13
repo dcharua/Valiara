@@ -111,10 +111,11 @@ th{
 }
 .bprint img{
   width: 90%;
-  height: 300px;
+  height: 280px;
 }
 
 #btnbp{
+  visibility: hidden;
   position: absolute;
   bottom: 12px;
   right: 0;
@@ -129,8 +130,11 @@ th{
   }
 }
 
-
-#acabadosTA{
+#imglev{
+  width: 140%;
+  margin-top: 3px;
+}
+#departamentosinfo{
   display: none;
 }
 
@@ -160,8 +164,12 @@ th{
 
 .interesado{
   position: absolute;
-  right: 30px;
+  right: 25px;
   bottom: -110px;
-  padding: 0px 20px;
+  padding: 0px 10px;
   font-size: 0.9em;;
+}
+
+#departamentosTB{
+  display: none;
 }

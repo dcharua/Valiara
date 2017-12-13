@@ -23,15 +23,16 @@
 
 
   <div id="verMasAfter" >
-    <div id="menos" class="menos" (click)="closeMas()">
-        <h4 class="activeh4">Torre A</h4> <img src="/icons/circle.svg" class="dot"> <h4>Torre B</h4>
-      <img src="/icons/Flecha_Abajo_Azul.svg" class ="arrow-down" >
+    <div id="menos" class="menos">
+        <h4 id="torreA" class="activeh4" (click)="toggleDepartamentos(1)">Torre A</h4> <img src="/icons/circle.svg" class="dot"> <h4 id="torreB" (click)="toggleDepartamentos(2)" >Torre B</h4>
+      <img src="/icons/Flecha_Abajo_Azul.svg" class ="arrow-down" (click)="closeMas()" >
   </div>
 
 
-    <h5 class="center-align active">Acabados</h5> <h5 class="center-align">Departamenos</h5>
+    <h5 id="acabados"(click)="toggleAcabados(1)" class="center-align crusor active">Acabados</h5> <h5 id="departamentos" (click)="toggleAcabados(2)" class="center-align crusor">Departamentos</h5>
     <hr>
-      <ul class="left-align" id="acabadosTA" style="display=none;">
+		<div id="acabadosinfo">
+      <ul class="left-align">
         <li>Laminado y porcelanato en piso</li>
         <li>Muebles de baño</li>
         <li>Lámparas</li>
@@ -43,60 +44,70 @@
         <li>Muros acabados en pintura</li>
         <li>Dos lugares de estacionamiento</li>
       </ul>
+		</div>
 
+		<div id="departamentosinfo"  [ngSwitch]="departamento.slug">
       <div id="departamentosTA">
         <div class="row">
-          <h5 class="center-align activeh5">GH 1</h5> <h5 class="center-align">Tipo 1</h5> <h5 class="center-align">Lofts</h5>
+          <h5 class="center-align active crusor" (click)="switchDepartamentos(0)" id="GH1A">GH 1</h5> <h5 class="center-align crusor" (click)="switchDepartamentos(1)"  id="TIPO1A">TIPO 1</h5> <h5 class="center-align crusor" (click)="switchDepartamentos(2)" id="LOFTA">LOFT</h5>
         </div>
-        <div id="info">
-        <div class="info-text">
-          <table >
-            <tr>
-              <th>Recamaras:</th>
-              <th class= "light">3</th>
-            </tr>
-            <tr>
-              <th>Baños:</th>
-              <th class= "light">3 completos</th>
-            </tr>
-            <tr>
-              <th>Interior:</th>
-              <th class= "light">129.5 m2</th>
-            </tr>
-            <tr>
-              <th>Jardin:</th>
-              <th class= "light">26 m2</th>
-            </tr>
-            <tr>
-              <th>Area Total:</th>
-              <th class= "light">155.5 m2</th>
-            </tr>
-		      </table>
-          <div id="otros">
-          <p><strong>Otros:</strong><br>
-            Estudio con opción de<br>
-            convertirse en una<br>
-            tercer recámara<br>
-            Cocina<br>
-            Sala Comedor<br>
-            Patio de Lavado<br>
-          </p>
-          </div>
-				 </div>
-
-				<div class="bprint">
-					<div style="position:relative">
-						<img src="/images/Departamentos/Planos/TorreA_GH1.png" id="imgbp">
-						<div id="btnbp">
-							<p id="estudio" class="active"  (click) = "estudio()"> Estudio  </p>
-							<p>|</p>
-							<p id="recamara" (click) = "recamara()">Recamara</p>
-						</div>
-					</div>
-				  <button class="btn-contacto btn interesado" type="submit" name="action">¡ESTOY INTERESADO!</button>
 			</div>
 
+			<div id="departamentosTB">
+        <div class="row nomargin">
+          <h5 class="center-align active crusor"  (click)="switchDepartamentosB(1)" id="GH1B" >GH 1</h5> <h5 class="center-align  crusor" (click)="switchDepartamentosB(2)" id="GH2B">GH 2</h5> <h5 class="center-align crusor" (click)="switchDepartamentosB(3)" id="GH3B">GH 3</h5>
         </div>
-      </div>
+				<div class="row" style="margin-bottom: 5px;">
+          <h5 class="center-align crusor" (click)="switchDepartamentosB(4)" id="TIPO1B">TIPO 1</h5> <h5 class="center-align crusor" (click)="switchDepartamentosB(5)" id="TIPO2B">TIPO 2</h5> <h5 class="center-align crusor" (click)="switchDepartamentosB(6)" id="TIPO3B">TIP0 3</h5>
+        </div>
+			</div>
+
+      <div id="info">
+      <div class="info-text">
+        <table >
+          <tr>
+            <th>Recamaras:</th>
+            <th class= "light">{{departamento.recamaras}}</th>
+          </tr>
+          <tr>
+            <th>Baños:</th>
+            <th class= "light">{{departamento.banos}}</th>
+          </tr>
+          <tr>
+            <th>Interior:</th>
+            <th class= "light">{{departamento.interior}}</th>
+          </tr>
+          <tr>
+            <th>{{departamento.opcion}}</th>
+            <th class= "light">{{departamento.jardin}}</th>
+          </tr>
+          <tr>
+            <th>Area Total:</th>
+            <th class= "light">{{departamento.area}}</th>
+          </tr>
+	      </table>
+        <div id="otros">
+					<p><strong>Otros:</strong><p/>
+        	<p style="white-space: pre;">{{departamento.otros}}</p>
+        </div>
+				<img src='{{departamento.planos[0]}}' id="imglev">
+			 </div>
+
+
+
+			<div class="bprint">
+				<div style="position:relative">
+					<img src='{{departamento.planos[1]}}' id="imgbp">
+					<div id="btnbp">
+						<p id="estudio" class="active crusor"  (click) = "toggleImage(0)"> Estudio  </p>
+						<p>|</p>
+						<p id="recamara" class="crusor" (click) = "toggleImage(1)">Recamara</p>
+					</div>
+				</div>
+			  <button class="btn-contacto btn interesado"  (click)="openNav()">¡ESTOY INTERESADO!</button>
+			</div>
+
+    </div>
   </div>
 </div>
+<overlay></overlay>

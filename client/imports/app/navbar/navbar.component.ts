@@ -18,9 +18,11 @@ export class NavbarComponent {
 					if (event instanceof NavigationStart){
 						// In the home section, the navbar elements vary a lot
 						if (event.url != '/' ) {
-							$('#logo-nav').css('visibility', 'visible');
+							this.icons[5] = "HomeGris.svg";
+							$('#logo-nav, #logo-mob').css('visibility', 'visible');
 						}else{
-								$('#logo-nav').css('visibility', 'hidden');
+							this.icons[5] = "HomeAmarillo.svg";
+							$('#logo-nav, #logo-mob').css('visibility', 'hidden');
 						}
 
 						if (event.url == '/amenitites' ){
@@ -58,20 +60,27 @@ export class NavbarComponent {
 
 
 	openNav() {
-		document.getElementById("sidenav").style.width = "100%";
+		document.getElementById("sidenav").style.width = "50%";
 		$('.closebtn').removeClass('animated rotateOut');
+		setTimeout(function() {
+			$("div#links").css({"display":"block "})
+		}, 300);
+		;
 	}
 
 	closeNav() {
 		$('.closebtn').addClass('animated rotateOut');
-
 		// For mobile wait for the yellow strikethrough animation to complete before closing
-		if ($(window).width() <= 992) {
 			setTimeout(function() {
 				document.getElementById("sidenav").style.width = "0";
+				$("div#links").css({"display":"none "});
 			}, 400);
-		} else {
-			document.getElementById("sidenav").style.width = "0";
-		}
+	}
+
+	toggleimg(op){
+		if (op == 1)
+			$('#logo-nav').attr("src","/logos/Logo_Blanco.svg");
+		else
+			$('#logo-nav').attr("src","/logos/Logo_Gris.svg");
 	}
 }
