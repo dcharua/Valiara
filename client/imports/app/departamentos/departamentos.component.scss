@@ -179,6 +179,33 @@ th{
 }
 
 
+#imgbig{
+  display: none;
+}
+.imgfull{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  img{
+    height: 90%;
+    margin-top: 3%;
+    margin-left: 25%
+  }
+  .cross{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 45px;
+    color: #fff;
+  }
+}
+
+
 @media  screen and (max-width : 1024px)  {
  #web{
    display: none;
@@ -269,5 +296,58 @@ th{
   #imglev {
     width: 130%;
     margin-top: 3px;
+  }
 }
+
+
+@media  screen and (max-width : 620px)  {
+  .slider .slides li img {
+      height: 550px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  .slider {
+    height: 550px !important;
+  }
+
+  #icons{
+    position: relative;
+    bottom: 275px;
+    z-index: 10;
+    right:0;
+    .arrows{
+       cursor: pointer;
+       background-color: #E3E3E5;
+       border-radius: 15px;
+     }
+     .right{
+       float: right;
+       margin-right: 10px;
+     }
+     .left{
+       float: left;
+       margin-left: 10px;
+     }
+   }
+
+   #verMas{
+     h4{
+       padding-top: 20px !important;
+       font-size: 1.2em;
+       margin: 0 20px;
+     }
+   }
+}
+
+
+@media  screen and (max-width : 500px)  {
+
+  #verMas{
+    h4{
+      padding-top: 25px !important;
+      font-size: 1.2em;
+      margin: 0px 8px;
+    }
+  }
 }

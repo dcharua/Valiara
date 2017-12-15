@@ -2,9 +2,9 @@ module.exports = {
   servers: {
     one: {
       // TODO: set host address, username, and authentication method
-      host: '52.41.117.143',
+      host: '18.217.133.73',
       username: 'ubuntu',
-      pem: '../../bolt.pem'
+      pem: '../../valiara.pem'
       // password: 'server-password'
       // or neither for authenticate from ssh-agent
     }
@@ -12,7 +12,7 @@ module.exports = {
 
   app: {
     // TODO: change app name and path
-    name: 'bolt',
+    name: 'valiara',
     path: '../',
 
     servers: {
@@ -26,8 +26,8 @@ module.exports = {
     env: {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
-      ROOT_URL: 'http://wearebolt.co',
-      MONGO_URL: 'mongodb://bolt-user:wi.fi.hd@ds123534.mlab.com:23534/bolt-db',
+      ROOT_URL: 'http://test.com',
+      MONGO_URL: 'mongodb://localhost/meteor',
     },
 
     // ssl: { // (optional)
@@ -40,8 +40,8 @@ module.exports = {
     // },
 
     docker: {
-      // change to 'kadirahq/meteord' if your app is using Meteor 1.3 or older
-      image: 'abernix/meteord:base',
+      // change to 'abernix/meteord:base' if your app is using Meteor 1.4 - 1.5
+      image: 'abernix/meteord:node-8.4.0-base',
     },
 
     // Show progress bar while uploading bundle to server

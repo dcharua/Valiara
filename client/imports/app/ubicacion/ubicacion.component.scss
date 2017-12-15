@@ -3,6 +3,9 @@
   width: 100%;
   background-color: #E3E3E5;
 }
+#web{
+  height: 100%;
+}
 #background-1 {
 	height: 100%;
 	width: 70%;
@@ -71,6 +74,32 @@
 
  #mobile{
    display: none;
+ }
+
+ #imgbig{
+   display: none;
+ }
+ .imgfull{
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 100;
+   background-color: rgba(0, 0, 0, 0.7);
+   width: 100%;
+   img{
+     height: 90%;
+     margin-top: 3%;
+     margin-left: 25%
+   }
+   .cross{
+     position: absolute;
+     top: 20px;
+     right: 45px;
+     font-size: 45px;
+     color: #fff;
+   }
  }
 
 

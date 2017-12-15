@@ -10,47 +10,51 @@
       <hr>
       <div class="row">
         <label class="container">Puebla
-          <input type="checkbox"   id="Puebla" (click) ="openContact()">
+          <input type="checkbox"   id="Puebla" (click) ="openContact(1)">
           <span class="checkmark"></span>
         </label>
 
         <label class="container">Cuidad de México
-          <input type="checkbox" id="CDMX" (click) ="openContact()">
+          <input type="checkbox" id="CDMX" (click) ="openContact(2)">
           <span class="checkmark"  ></span>
         </label>
     </div>
   </div>
 
   <div id="contact">
-
       <div class="form">
-        <form class="col s12 center-align">
-
+        <form class="col s12 center-align" [formGroup]="addForm" (ngSubmit)="sendMail()">
+            <h3 id="validate" style="font-size: 1.4em;">Por favor llena todos tus datos para poder contactarte </h3>
           <div class="row">
             <div class="input-field col s12 m5">
-                <img src="/icons/Icono_Contacto.svg" class="material-icons prefix">
-                <input id="nombre" type="text" class="validate">
+                <img src="/icons/Icono_Contacto.svg" class="material-icons prefix icn">
+                <input id="nombre" type="text" class="validate" formControlName="name">
                 <label for="icon_prefix">Nombre Completo</label>
               </div>
               <div class="input-field col m1"></div>
               <div class="input-field col s12 m5">
-                  <img src="/icons/Icono_Mail.svg" class="material-icons prefix">
-                  <input id="mail" type="text" class="validate">
+                  <img src="/icons/Icono_Mail.svg" class="material-icons prefix icn">
+                  <input id="mail" type="text" class="validate" formControlName="email">
                   <label for="icon_prefix">E-mail</label>
                 </div>
           </div>
 
           <div class="row">
             <div class="input-field  col s12 m5">
-                <img src="/icons/Icono_Telefono.svg" class="material-icons prefix">
-                <input id="telefono" type="text" class="validate">
+                <img src="/icons/Icono_Telefono.svg" class="material-icons prefix icn">
+                <input id="telefono" type="text" class="validate" formControlName="phone">
                 <label for="icon_prefix">Teléfono</label>
               </div>
           </div>
 
-          <button class="btn-contacto btn-large" type="submit" name="action">¡QUIERO MI CASA!</button>
+          <button  type="submit" class="btn-contacto btn-large">¡QUIERO MI CASA!</button>
         </form>
       </div>
+    </div>
+
+    <div class="overlay-content" id="thank">
+        <h3>¡Gracias, te contactaremos lo ántes posible!</h3>
+        <div class="btn-contacto btn-large" (click)="closeNav()" style="font-size:1.4em;">IR A PÁGINA DE INICIO</div>
     </div>
   </div>
 

@@ -98,7 +98,7 @@
 
 				<div class="bprint">
 					<div style="position:relative">
-						<img src='{{departamento.planos[1]}}' id="imgbp">
+						<img src='{{departamento.planos[1]}}' id="imgbp" (click) ="fullimg()" style="cursor: pointer;">
 						<div id="btnbp">
 							<p id="estudio" class="active crusor"  (click) = "toggleImage(0)"> Estudio  </p>
 							<p>|</p>
@@ -110,6 +110,10 @@
 	    	</div>
 	  	</div>
 		</div>
+	</div>
+	<div class="imgfull" id="imgbig">
+		  <a href="javascript:void(0)" class="cross" (click)="closeimg()">&times;</a>
+		<img id="planofull" src='{{departamento.planos[1]}}'>
 	</div>
 </div>
 
@@ -198,7 +202,7 @@
 
 				<div class="bprint">
 					<div style="position:relative">
-						<img src='{{departamento.planos[1]}}' id="imgbp">
+						<img src='{{departamento.planos[1]}}' id="imgbpM">
 						<div id="btnbpM">
 							<p id="estudioM" class="active crusor"  (click) = "toggleImage(0)"> Estudio  </p>
 							<p>|</p>

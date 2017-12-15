@@ -90,3 +90,9 @@ width: 200px;
    display: block;
  }
 }
+
+@media  screen and (max-width : 550px)  {
+.logo img{
+    width: 120px;
+  }
+}

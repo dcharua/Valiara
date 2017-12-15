@@ -18,10 +18,12 @@ export class NavbarComponent {
 					if (event instanceof NavigationStart){
 						// In the home section, the navbar elements vary a lot
 						if (event.url != '/' ) {
+							$('#burger').attr("src","/mobile/Iconos/hamburguesa_negra.svg");
 							this.icons[5] = "HomeGris.svg";
 							$('#logo-nav, #logo-mob').css('visibility', 'visible');
 							$("#home").removeClass('active');
 						}else{
+							$('#burger').attr("src","/mobile/Iconos/hamburguesa_blanca.svg");
 							this.icons[5] = "HomeAmarillo.svg";
 							$('#logo-nav, #logo-mob').css('visibility', 'hidden');
 							$("#home").addClass('active');
@@ -72,7 +74,11 @@ export class NavbarComponent {
 
 
 	openNav() {
-		document.getElementById("sidenav").style.width = "50%";
+		 if($(window).width() < 550) {
+			 document.getElementById("sidenav").style.width = "100%";
+		}else{
+			document.getElementById("sidenav").style.width = "50%";
+		}
 		$('.closebtn').removeClass('animated rotateOut');
 		setTimeout(function() {
 			$("div#links").css({"display":"block "})
@@ -95,4 +101,5 @@ export class NavbarComponent {
 		else
 			$('#logo-nav').attr("src","/logos/Logo_Gris.svg");
 	}
+
 }

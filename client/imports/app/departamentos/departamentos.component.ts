@@ -110,13 +110,13 @@ export class DepartamentosComponent  implements OnInit{
 
 	toggleImage(num){
 		if (num==0){
-			$("#imgbp").attr("src", this.departamento.planos[1]);
-			$("#recamara" ).removeClass('active');
-			$("#estudio").addClass('active');
+			$("#imgbp, #imgbpM, #planofull").attr("src", this.departamento.planos[1]);
+			$("#recamara, #recamaraM" ).removeClass('active');
+			$("#estudio, #estudioM").addClass('active');
 		}else{
-			$("#imgbp").attr("src", this.departamento.planos[2]);
-			$("#estudio" ).removeClass('active');
-			$("#recamara").addClass('active');
+			$("#imgbp, #imgbpM, #planofull").attr("src", this.departamento.planos[2]);
+			$("#estudio, #estudioM" ).removeClass('active');
+			$("#recamara, #recamaraM").addClass('active');
 		}
 	}
 
@@ -177,6 +177,13 @@ export class DepartamentosComponent  implements OnInit{
 		$("div#over").css({"width":"100% "});
 	}
 
+	fullimg(){
+		$("div#imgbig").css({"display":"block "});
+	}
+
+	closeimg(){
+		$("div#imgbig").css({"display":"none "});
+	}
 	// mobile
 
 

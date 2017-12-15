@@ -16,10 +16,15 @@
         <button type="button" id="btnang" class="active" style="margin-bottom:5px;" (click) = "angelopolis()">&nbsp; Angelopolis</button>
         <button type="button" id="btnsin" (click) = "sinaloa()">&nbsp; Parque Sinaloa</button>
       </div>
-      <img src="/images/Ubicacion/Mapa_Angelopolis.jpg" id="imgmap">
+      <img src="/images/Ubicacion/Mapa_Angelopolis.jpg" id="imgmap" (click)="fullimg()" style="cursor:pointer;">
     </div>
     <div id="background-1"></div>
   </div>
+
+  <div class="imgfull" id="imgbig">
+		  <a href="javascript:void(0)" class="cross" (click)="closeimg()">&times;</a>
+		<img id="planofull" src='/images/Ubicacion/Mapa_Angelopolis.jpg' >
+	</div>
 </div>
 
 <div id="mobile" class="mobilesection">
@@ -38,6 +43,6 @@
       <button type="button" id="btnang-mob" class="active" style="margin-bottom:5px;" (click) = "angelopolis()">&nbsp; Angelopolis</button>
       <button type="button" id="btnsin-mob" (click) = "sinaloa()">&nbsp; Parque Sinaloa</button>
     </div>
-    <img src="/images/Ubicacion/Mapa_Angelopolis.jpg" id="imgmap">
+    <img src="/images/Ubicacion/Mapa_Angelopolis.jpg" id="imgmap-mob">
   </div>
 </div>
