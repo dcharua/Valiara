@@ -44,6 +44,14 @@ export class DepartamentosComponent  implements OnInit{
 		this.imgbool = true;
 		 $('.slider').slider();
 		 $('.slider').slider('start');
+
+		  if($(window).width() > 1024) {
+		 		setTimeout(function() {
+					$("div#mas").css({"display":"none "});
+			 		$("div#verMasAfter").css({"display":"block"});
+			 		$("div#verMas").css({"height":"100% "})
+		 		}, 4000);
+			}
 		}
 
 	switchDepartamentos(num){
@@ -142,13 +150,13 @@ export class DepartamentosComponent  implements OnInit{
 		if (opt ==2){
 			$("div#acabadosinfo").css({"display":"none "});
 			$("div#departamentosinfo").css({"display":"block "});
-			$("#departamentos").addClass('active');
+			$("#departamentosh5").addClass('active');
 			$("#acabados").removeClass('active');
 		}else{
 			$("div#acabadosinfo").css({"display":"block "});
 			$("div#departamentosinfo").css({"display":"none "});
 			$("#acabados").addClass('active');
-			$("#departamentos").removeClass('active');
+			$("#departamentosh5").removeClass('active');
 		}
 	}
 
@@ -173,7 +181,8 @@ export class DepartamentosComponent  implements OnInit{
 		$("div#verMas").css({"height":"10% "})
 	}
 
-	openNav() {
+	openNav(){
+		$("div#city, div#logo").css({"display":"block"});
 		$("div#over").css({"width":"100% "});
 	}
 

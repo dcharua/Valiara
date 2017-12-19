@@ -56,18 +56,22 @@
 
 @media  screen and (max-width : 550px)  {
   .slider .slides li img {
-      height: 550px;
+      height: auto;
       width: 100%;
       background-size: cover;
       background-position: center;
     }
   .slider {
-    height: 550px !important;
+    height: auto !important;
   }
+  .slider .slides {
+    margin: 0;
+    height: -webkit-fill-available !important;
+    background-color: #fff;
+}
 
   #icons{
     position: relative;
-    bottom: 275px;
     z-index: 10;
     right:0;
     .arrows{

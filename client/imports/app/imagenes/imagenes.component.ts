@@ -1,4 +1,4 @@
-import { Component,  OnInit, Input} from '@angular/core';
+import { Component,  OnInit, Input, AfterViewInit} from '@angular/core';
 import template from './imagenes.component.html';
 import style from './imagenes.component.scss';
 import { NavbarComponent } from '../navbar/navbar.component';
@@ -15,7 +15,6 @@ export class ImagenesComponent implements OnInit{
 
 	ngOnInit() {
 	 $('.slider').slider();
-	  $('.materialboxed').materialbox();
 
 	 $('.slider').slider('start');
 		}
@@ -35,4 +34,11 @@ export class ImagenesComponent implements OnInit{
 		$("div#city, div#logo").css({"display":"block"});
 		$("div#over").css({"width":"100% "});
 	}
+	toggleimg(op){
+		if (op == 1)
+			$('#logosrc').attr("src","/logos/Logo_Blanco.svg");
+		else
+			$('#logosrc').attr("src","/logos/Logo_Gris.svg");
+	}
+
 }

@@ -20,10 +20,16 @@ export class NavbarComponent {
 						// In the home section, the navbar elements vary a lot
 						if (event.url != '/' ) {
 							$('#burger').attr("src","/mobile/Iconos/hamburguesa_negra.svg");
+							if($(window).width() < 550) {
+				 			  	$('#navbar').css('background-color' , 'rgba(242, 242, 242, 0.9)')
+				 			}
 							this.icons[5] = "HomeGris.svg";
 							$('#logo-nav, #logo-mob').css('visibility', 'visible');
 							$("#home").removeClass('active');
 						}else{
+							if($(window).width() < 550) {
+				 			  	$('#navbar').css('background-color' , 'transparent')
+				 			}
 							$('#burger').attr("src","/mobile/Iconos/hamburguesa_blanca.svg");
 							this.icons[5] = "HomeAmarillo.svg";
 							$('#logo-nav, #logo-mob').css('visibility', 'hidden');
@@ -98,9 +104,9 @@ export class NavbarComponent {
 
 	toggleimg(op){
 		if (op == 1)
-			$('#logo-nav').attr("src","/logos/Logo_Blanco.svg");
+			$('#logosrc').attr("src","/logos/Logo_Blanco.svg");
 		else
-			$('#logo-nav').attr("src","/logos/Logo_Gris.svg");
+			$('#logosrc').attr("src","/logos/Logo_Gris.svg");
 	}
 
 }

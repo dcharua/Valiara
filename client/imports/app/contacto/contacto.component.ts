@@ -11,9 +11,10 @@ declare var $:any;
 })
 export class ContactoComponent {
 
-		openNav() {
-			$("div#over").css({"width":"100% "});
-		}
+	openNav(){
+		$("div#city, div#logo").css({"display":"block"});
+		$("div#over").css({"width":"100% "});
+	}
 
 		openAviso(){
 			$("div#privacidad").css({"height":"100%","display":"block"});

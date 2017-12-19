@@ -179,15 +179,7 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
 }
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
+
 .logo{
   padding-top: 15px;
   text-align: center;
@@ -210,4 +202,21 @@ width: 150px;
 
 .icn{
   padding-right: 5px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+ @media  screen and (max-width : 550px){
+
+  .container{
+    position: relative;
+    padding-left: 33px;
+    margin: 3%;
+    cursor: pointer;
+    font-size: 15px;
+    padding-top: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 }

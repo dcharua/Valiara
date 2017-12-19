@@ -30,7 +30,7 @@
 	  </div>
 
 
-	    <h5 id="acabados"(click)="toggleAcabados(1)" class="center-align crusor active">Acabados</h5> <h5 id="departamentos" (click)="toggleAcabados(2)" class="center-align crusor">Departamentos</h5>
+	    <h5 id="acabados"(click)="toggleAcabados(1)" class="center-align crusor active">Acabados</h5> <h5 id="departamentosh5" (click)="toggleAcabados(2)" class="center-align crusor">Departamentos</h5>
 	    <hr>
 			<div id="acabadosinfo">
 	      <ul class="left-align">
@@ -111,7 +111,7 @@
 	  	</div>
 		</div>
 	</div>
-	<div class="imgfull" id="imgbig">
+	<div class="imgfull" id="imgbig" (click)="closeimg()" style="cursor: zoom-out;">
 		  <a href="javascript:void(0)" class="cross" (click)="closeimg()">&times;</a>
 		<img id="planofull" src='{{departamento.planos[1]}}'>
 	</div>

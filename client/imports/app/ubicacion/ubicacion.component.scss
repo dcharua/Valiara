@@ -140,3 +140,19 @@
     }
   }
 }
+
+ @media  screen and (max-width : 550px)  {
+
+#btnmap{
+  button{
+    font-size: 14px;
+    width: 120px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+}
+hr{
+    width: 60%;
+    border: 1px solid #C4A833;
+}
+}

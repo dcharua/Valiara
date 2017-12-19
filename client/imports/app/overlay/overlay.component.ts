@@ -47,11 +47,6 @@ export class OverlayComponent implements OnInit {
 		}, 400);
 	}
 
-	 addTask(newTask) {
-		 console.log(newTask);
-		 console.log("in");
-	 }
-
 	sendMail(){
 		 if (this.addForm.valid) {
 			 if (this.city){
@@ -69,6 +64,13 @@ export class OverlayComponent implements OnInit {
 					this.addForm.controls.name.value,
 					this.addForm.controls.phone.value
 				);
+				Meteor.call(
+					'sendEmail',
+					"valiara.puebla@gmail.com",
+					this.addForm.controls.email.value,
+					this.addForm.controls.name.value,
+					this.addForm.controls.phone.value
+				);
 			}else{
 				Meteor.call(
 				  'sendEmail',
@@ -76,6 +78,13 @@ export class OverlayComponent implements OnInit {
 				 	this.addForm.controls.email.value,
 					this.addForm.controls.name.value,
 				  this.addForm.controls.phone.value
+				);
+				Meteor.call(
+					'sendEmail',
+					"valiara.puebla@gmail.com",
+					this.addForm.controls.email.value,
+					this.addForm.controls.name.value,
+					this.addForm.controls.phone.value
 				);
 			}
 		this.addForm.reset();
