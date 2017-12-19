@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import template from './navbar.component.html';
 import style from './navbar.component.scss';
+
 declare var $:any;
 
 @Component({

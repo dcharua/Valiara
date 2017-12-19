@@ -205,7 +205,6 @@ th{
   }
 }
 
-
 @media  screen and (max-width : 1024px)  {
  #web{
    display: none;
@@ -342,6 +341,9 @@ th{
 
 
 @media  screen and (max-width : 500px)  {
+  #btnbpM{
+    bottom: 0;
+  }
 
   #verMas{
     h4{
@@ -349,5 +351,26 @@ th{
       font-size: 1.2em;
       margin: 0px 8px;
     }
+    h5{
+      display: inline-block;
+      padding: 0 10px;
+      font-family: Futura;
+      font-size: 1.1em;
+    }
   }
+
+  th {
+    padding: 2px 0 !important;
+    font-size: 0.85em;
+  }
+
+  #go-away{
+    display: none !important;
+  }
+
+  .interesado{
+    position: static;
+    font-size: 0.8em;
+    margin-top: 50px;
+}
 }

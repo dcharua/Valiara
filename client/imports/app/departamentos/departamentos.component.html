@@ -98,7 +98,7 @@
 
 				<div class="bprint">
 					<div style="position:relative">
-						<img src='{{departamento.planos[1]}}' id="imgbp" (click) ="fullimg()" style="cursor: pointer;">
+						<img src='{{departamento.planos[1]}}' id="imgbp" (click) ="fullimg()" style="cursor:  zoom-in;">
 						<div id="btnbp">
 							<p id="estudio" class="active crusor"  (click) = "toggleImage(0)"> Estudio  </p>
 							<p>|</p>
@@ -133,7 +133,7 @@
 	    <div id="menos" class="menos">
 	        <h4 id="torreA-mobile" (click)="toggleMobile(1)">Torre A</h4>
 					<img src="/icons/circle.svg" class="dot"> <h4 id="torreB-mobile" (click)="toggleMobile(2)" >Torre B</h4>
-					<img src="/icons/circle.svg" class="dot"> <h4 id="acabados-moblie" (click)="toggleAcabadosM()" >Acabados</h4>
+					<div id="go-away"><img src="/icons/circle.svg" class="dot"> <h4 id="acabados-moblie" (click)="toggleAcabadosM()" >Acabados</h4></div>
 	      <img id="arrow-web" src="/icons/Flecha_Abajo_Azul.svg" class ="arrow-down" (click)="openDep()" >
 	  </div>
 			<div id="acabadosinfo-mobile">
